@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "datatables.net": "^1.10.20",
+    "datatables.net-dt": "^1.10.20",
+    "react-autocomplete": "^1.8.1"
+  }
+}

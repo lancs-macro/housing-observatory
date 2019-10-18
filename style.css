@@ -1,5 +1,11 @@
-#page-content {
+body {
+    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+}
+
+page-content {
     flex: 1 0 auto;
+    width: 100%;
+    width: 100%;
 }
 
 
@@ -7,6 +13,16 @@
 
 .navbar-brand {
     position: absolute;
+}
+
+.navbar-brand span {
+    font-size: 40px;
+}
+
+@media screen and (max-width: 601px) {
+    .navbar-brand span {
+        font-size: 16px;
+    }
 }
 
 
@@ -43,10 +59,30 @@
     }
 }
 
+.nav-item {
+    padding: 0 10px;
+}
+
+.nav-item .btn {
+    border: 1px solid rgba(153, 153, 153, 0.4);
+    border-radius: 10px;
+    position: relative;
+    /* padding: 5px 0px; */
+    white-space: nowrap;
+    margin-top: 23px;
+    padding: 5px 15px;
+    color: rgb(153, 153, 153);
+}
+
+.nav-item .btn:hover {
+    background-color: grey;
+    color: white;
+}
+
 
 /* jumbotron */
 
-.jumbotron {
+.jumbotron-index {
     color: white;
     background-image: url("https://www.lancaster.ac.uk/media/lancaster-university/content-assets/images/lums/masthead-1600x400/housingobservatory1600x400.png");
     background-position: center;
@@ -55,7 +91,7 @@
     height: 40vh;
 }
 
-.jumbotron .container {
+.jumbotron-index .container {
     background: rgba(255, 255, 255, 0.85);
     width: 100%;
     /* position: absolute; */
@@ -90,6 +126,11 @@ section {
 html {
     position: relative;
     min-height: 100%;
+    margin-bottom: 0px;
+}
+
+.footer-wrapper {
+    padding-top: 4em;
 }
 
 footer {
@@ -116,6 +157,10 @@ footer {
 
 /* carousel */
 
+.carousel {
+    margin-bottom: 10em;
+}
+
 .col-md-3 {
     display: inline-block;
     margin-left: -4px;
@@ -132,12 +177,13 @@ body .carousel-indicators li {
 
 body .carousel-indicators {
     /* bottom: 0; */
-    bottom: -50px;
+    bottom: -80px;
 }
 
 body .carousel-control-prev-icon,
 body .carousel-control-next-icon {
     background-color: #4b4b4b;
+    padding-bottom: -100rem;
 }
 
 body .no-padding {

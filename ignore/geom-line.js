@@ -86,6 +86,10 @@ trace2 = {
     },
     opacity: 1
 };
+
+
+
+
 data = [trace1, trace2];
 layout = {
     font: {
@@ -220,6 +224,7 @@ layout = {
     plot_bgcolor: '#fff',
     paper_bgcolor: '#fff'
 };
+
 Plotly.plot('plotly-div', {
     data: data,
     layout: layout

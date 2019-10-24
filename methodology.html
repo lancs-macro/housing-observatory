@@ -5,29 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Methodology</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-generic.css">
+    <title>UK Housing Observatory</title>
+    <link rel="shortcut icon" href="logo.png" />
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Bootsrap Theme Journal -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css">
+
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 </head>
 
 <body>
     <!--Navigation bar-->
-    <div id="nav-placeholder">
-
-    </div>
-
+    <div id="nav-placeholder"></div>
     <script>
         $(function() {
             $("#nav-placeholder").load("nav.html");
         });
     </script>
     <!--end of Navigation bar-->
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container col-md-6 col-sm-12">
+            <h1 class="display-4"> Methodology</h1>
+            <!-- <h4 class="display-6"> Data Sources & Methodology</h4> -->
+        </div>
+    </div>
+
+    <section id="data-sources">
+        <div class="container">
+            <h3>Data Sources & Manipulation </h3>
+            <p> House Price data are obtained from nationwide. Regional House Price indices for 13 regions of the UK are published quarterly by the Nationwide. To transform the data into real values, each regional series is deflated with consumer price index
+                (CPI). Regional income data is obtained from the Family Expenditure Survey (FES)*. For each year, starting from 1975, the dataset is split by region** and the data on average total household's weekly expenditure is extracted. The annual
+                data is then interpolated to obtain quarterly series.
+            </p>
+            <p>
+                *The FES runs from 1961 to 2001. From 2001 it was replaced by a new survey, the Expenditure and Food Survey (EFS), which became the Living Costs and Food Survey (LCF) from 2008."
+            </p>
+            <p>
+                **Due to the differences in regional classifications, Outer Metropolitan and Outer South East are assumed to correspond to the South East region in the regional classification adopted by the FES.
+            </p>
+        </div>
+    </section>
+
+
+    <!--Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        $(function() {
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+    <!--end of footer-->
 
 </body>
 

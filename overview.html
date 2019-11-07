@@ -10,6 +10,8 @@
     <title>UK Housing Observatory</title>
     <link rel="shortcut icon" href="logo.png" />
 
+    <link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
+
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -36,15 +38,16 @@
             $("#nav-placeholder").load("nav.html");
         });
     </script>
-    <!--end of Navigation bar-->
 
+    <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid">
         <div class="container col-md-6 col-sm-12">
             <h1 class="display-4"> Overview</h1>
         </div>
     </div>
 
-    <section>
+    <!-- Overview Section -->
+    <section id="overview">
         <div class="container">
             <h3>Chronology of exuberance in international housing markets.</h3>
             <p>The below figures show the periods during which real house prices and house-price-to-income ratios displayed explosive dynamics (i.e., the periods during which the estimated BSADF statistics exceeded the corresponding 95% critical values).
@@ -62,6 +65,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="gap"></div>
                 <div class="col-sm-6">
                     <div class="box">
                         <div class="box-header">
@@ -125,11 +129,8 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </section>
-
 
     <!--Footer -->
     <div id="footer-placeholder"></div>
@@ -138,7 +139,6 @@
             $("#footer-placeholder").load("footer.html");
         });
     </script>
-    <!--end of footer-->
 </body>
 
 </html>

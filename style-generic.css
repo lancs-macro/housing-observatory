@@ -48,11 +48,8 @@ html {
     margin-bottom: 0px;
 }
 
-.footer-wrapper {
-    padding-top: 4em;
-}
-
 footer {
+    padding-top: 4rem;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -80,17 +77,33 @@ footer {
     position: absolute;
 }
 
-.navbar-brand span {
+.navbar-brand div {
     padding-left: 3rem;
     line-height: 120%;
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 26px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    /* font-weight: 600; */
     /* color: firebrick; */
+    display: block;
+    white-space: pre-line;
+}
+
+.navbar-brand .name {
+    font-family: 'Gloria Hallelujah';
+    /* font-size: 22px; */
+    white-space: nowrap;
+}
+
+.navbar-brand .bottom-name {
+    color: black;
+    font-family: 'Gloria Hallelujah';
 }
 
 @media screen and (max-width: 601px) {
-    .navbar-brand span {
+    .navbar-brand div {
         font-size: 18px;
+        padding-left: 0rem;
     }
 }
 
@@ -144,4 +157,19 @@ footer {
     background-color: grey;
     color: white !important;
     border: 1px solid rgba(153, 153, 153, 0.4);
+}
+
+iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 999999;
 }

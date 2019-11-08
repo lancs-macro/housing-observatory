@@ -184,7 +184,6 @@ footer a {
 }
 
 #publications a {
-    color: rgb(155, 41, 41);
     padding: 0;
     margin: 0.5rem;
     text-align: center;
@@ -196,15 +195,15 @@ footer a {
     background-color: #efefef;
 }
 
-#publications a {
-    color: rgb(155, 41, 41);
-    padding: 0;
-    margin: 0.5rem;
-    text-align: center;
-}
-
 #publication2 {
     margin-bottom: 5rem;
+}
+
+
+/* Media Section */
+
+#media h6 {
+    color: grey;
 }
 
 

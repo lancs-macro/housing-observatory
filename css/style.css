@@ -86,6 +86,38 @@ footer a {
 }
 
 
+/* about */
+
+#about h2 {
+    padding-bottom: 0;
+}
+
+#about h5 {
+    padding: 1rem 0;
+    line-height: 1.5;
+    color: grey;
+}
+
+
+/* section release */
+
+#release p {
+    font-size: 20px !important;
+}
+
+
+/* section markets */
+
+#markets h2 {
+    padding-top: 3rem;
+}
+
+#markets p {
+    padding: 2rem 4rem;
+    text-align: justify;
+}
+
+
 /* section meet */
 
 #meet {
@@ -207,8 +239,17 @@ footer a {
 }
 
 
+/* ----------------------------------- */
+
+
+/* Tab overview */
+
+
+/* ---------------------------------- */
+
+
 /* Overview Section */
 
-#overview .box {
-    margin-bottom: 5rem;
+.gap-horizontal {
+    padding: 2rem 0;
 }

@@ -1,5 +1,5 @@
-body {
-    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+section {
+    font-size: 16px !important;
 }
 
 body a {
@@ -31,8 +31,13 @@ section h2 {
     background-color: #efefef;
 }
 
-.bg-dark {
-    background-color: #4d0000;
+.bg-gray2 {
+    background-color: #4b4b4c !important;
+    color: white;
+}
+
+.bg-gray2 p {
+    color: white;
 }
 
 .card {

@@ -1,0 +1,171 @@
+library(rlang)
+
+# Custom Labels  ----------------------------------------------------------
+
+extract_yq <- function(object) {
+  yq <- object %>% 
+    select_if(lubridate::is.Date) %>% 
+    setNames("Date") %>% 
+    mutate(Quarter = lubridate::quarter(Date),
+           Year = lubridate::year(Date)) %>% 
+    tidyr::unite(labels, c("Year", "Quarter"), sep = " Q") %>% 
+    rename(breaks = Date)
+}
+
+scale_custom <- function(object, div = 7) {
+  require(lubridate)
+  custom_date <- function(object, variable, div) {
+    
+    yq <- extract_yq(object)
+    seq_slice <- seq(1, NROW(yq), length.out = div)
+    yq %>% 
+      slice(seq_slice) %>% 
+      pull(!!parse_expr(variable))
+  }
+  
+  scale_x_date(
+    breaks = custom_date(fortify(object), variable = "breaks", div = div),
+    labels = custom_date(fortify(object), variable = "labels", div = div)
+  )
+}
+
+# Datestamp into yq
+
+to_yq <- function(ds, radf_var, cv_var){
+  
+  index_yq <- extract_yq(fortify(radf_var, cv =  cv_var))
+  
+  ds_yq <- function(ds) {
+    start <- ds[, 1]
+    start_ind <- which(index_yq$breaks %in% start)
+    start_label <- index_yq[start_ind ,2]
+    
+    end <- ds[, 2]
+    end_ind <- which(index_yq$breaks %in% end)
+    if (anyNA(end)) end_ind <- c(end_ind, NA)
+    end_label <- index_yq[end_ind ,2]
+    
+    ds[, 1] <- start_label 
+    ds[, 2] <- end_label
+    ds
+  }
+  
+  ds %>% 
+    ds_yq()
+}
+
+ggarrange = function (...) {
+  do.call(gridExtra::arrangeGrob, c(...))
+}
+
+# datatable-DT ------------------------------------------------------------
+
+
+specify_buttons <- function(filename) {
+  list(
+    list(
+      extend = "collection",
+      buttons =
+        list(
+          list(
+            extend = 'csv',
+            filename = filename, 
+            exportOptions  =
+              list(
+                modifier = 
+                  list(
+                    page = "all",
+                    search = 'none'))),
+          list(
+            extend = 'excel',
+            filename = filename,
+            title = "International Housing Observatory")),
+      text = "Download"
+    )
+  )
+}
+
+make_DT <- function(x, filename, caption_string = ""){
+  DT::datatable(
+    x,
+    rownames = FALSE,
+    caption = caption_string,
+    extensions = 'Buttons',
+    options = list( 
+      dom = 'Bfrtip', #'Blfrtip'
+      searching = FALSE,
+      autoWidth = TRUE,
+      paging = TRUE,
+      # scrollY = T,
+      scrollX = T,
+      columnDefs = list(
+        list(
+          targets = c(0), width = "80px")),
+      buttons = specify_buttons(filename)
+                )) %>%
+    DT::formatRound(2:NCOL(x), 3) 
+}
+
+make_DT_general <- function(x, filename) {
+  DT::datatable(
+    x,
+    rownames = FALSE,
+    extensions = 'Buttons',
+    options = list(
+      dom = 'Bfrtip',#'Blfrtip',
+      searching = FALSE,
+      autoWidth = TRUE,
+      paging = TRUE,
+      scrollX = F,
+      # columnDefs = list(list(targets = c(0), width = "80px")),
+      buttons = specify_buttons(filename)
+    )
+  ) %>%
+    DT::formatRound(2:NCOL(x), 3) 
+}
+
+
+create_leaflet <- function(x, code) {
+  require(leaflet)
+  regional_names <- x@data[[paste0("nuts", code, "nm")]]
+  regional_codes <- x@data[[paste0("nuts", code, "cd")]]
+  pal <-  colorNumeric("Reds", domain = order(regional_names))
+  pal_var <- pal(unclass(regional_names))
+  lbls <- sprintf( "<strong> %s </strong> <br> NUTS Code: %s", 
+                   regional_names, regional_codes) %>% 
+    lapply(htmltools::HTML)
+  highlights <-  highlightOptions(
+    weight = 5,
+    color = "#444", #666
+    dashArray = "",
+    fillOpacity = 0.7,
+    bringToFront = TRUE)
+  leaflet(
+    options = 
+      leafletOptions(
+        zoomControl = FALSE,
+        minZoom = 5.5,
+        maxZoom = 5.5,
+        background = "white",
+        doubleClickZoom = FALSE,
+        dragging = FALSE)
+  ) %>% 
+    addPolygons(
+      data = x,
+      fillColor = ~ pal_var,
+      weight = 2,
+      opacity = 1,
+      color = "white",
+      dashArray = "3",
+      fillOpacity = 0.7,
+      layerId = ~ nuts118nm,
+      highlightOptions = highlights,
+      label = lbls,
+      labelOptions = labelOptions(
+        style = list(
+          "font-weight" = "normal", 
+          padding = "3px 8px"),
+        textsize = "15px",
+        direction = "auto")
+    )
+}

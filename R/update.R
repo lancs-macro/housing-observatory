@@ -7,7 +7,7 @@ download.file("https://raw.githubusercontent.com/nik01010/dashboardthemes/master
               "R/dashboardthemes-functions.R")
 
 
-# Download shapefiles
+# Download shapefiles and save 
 
 download.file("http://geoportal1-ons.opendata.arcgis.com/datasets/01fd6b2d7600446d8af768005992f76a_4.zip",
         destfile = "data/nuts1/Shapefile.zip")

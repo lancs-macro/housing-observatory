@@ -95,20 +95,32 @@ footer {
 }
 
 .navbar-brand .name {
-    font-family: 'Gloria Hallelujah';
-    /* font-size: 22px; */
+    /* font-family: 'Gloria Hallelujah'; */
+    font-family: 'Oswald', sans-serif;
+    font-size: 34px;
     white-space: nowrap;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    font-weight: bold;
 }
 
 .navbar-brand .bottom-name {
     color: black;
-    font-family: 'Gloria Hallelujah';
+    /* font-family: 'Gloria Hallelujah'; */
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 601px) {
     .navbar-brand div {
-        font-size: 18px;
-        padding-left: 0rem;
+        font-size: 20px !important;
+        padding-left: 1.5rem;
+    }
+    .navbar-brand img {
+        max-width: 40px;
+        max-height: 40px;
     }
 }
 

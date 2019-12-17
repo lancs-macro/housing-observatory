@@ -40,6 +40,15 @@ section h2 {
     color: white;
 }
 
+.bg-darkred {
+    background-color: rgba(153, 47, 47, 0.7);
+    color: white;
+}
+
+.bg-darkred p {
+    color: white;
+}
+
 .card {
     border: 0px !important;
 }

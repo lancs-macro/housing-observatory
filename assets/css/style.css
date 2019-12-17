@@ -105,6 +105,26 @@ footer a {
     font-size: 20px !important;
 }
 
+#release .card {
+    background-color: inherit;
+    color: white;
+}
+
+#release h2:after {
+    margin: 1rem;
+    content: ' ';
+    display: block;
+    border: 2px solid white;
+}
+
+#release h2 {
+    padding-bottom: 0px;
+}
+
+#release .card-text {
+    font-size: 22px !important;
+}
+
 
 /* section markets */
 

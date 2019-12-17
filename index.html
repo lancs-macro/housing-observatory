@@ -59,7 +59,7 @@
     <!--end of Navigation bar-->
 
     <!-- Start the dashboard silently to reduce the loading time -->
-    <iframe src="https://kvasilopoulos.shinyapps.io/housing_observatory/" style="visibility: hidden;"></iframe>
+    <iframe src="https://lancs-macro.shinyapps.io/uk-housing-observatory-dashboard" style="visibility: hidden;"></iframe>
 
 
     <div class="jumbotron jumbotron-index jumbotron-fluid parallax">
@@ -69,11 +69,32 @@
         </div>
     </div>
 
-    <section id="release" class="text-center bg-gray2">
+    <section id="release" class="text-center bg-darkred">
         <div class="container">
-            <h2>Latest Release: 2019 Q2</h2>
-            <p>The annual growth rate currently stands at 0.7%. </p>
-            <p>Property prices in Greater London have fallen by nearly 4.5% since the historical maximum of 2017 Q1. </p>
+
+            <div class="card-deck">
+                <div class="card mb-3 text-center" style="width: 18rem;">
+                    <div class="card-body">
+                        <h2 class="card-title">2019 Q2</h2>
+                        <p class="card-text">Latest Release</p>
+                    </div>
+                </div>
+                <div class="card mb-3 text-center" style="width: 18rem;">
+                    <div class="card-body">
+                        <h2 class="card-title"> 0.7 % </h2>
+                        <p class="card-text">National Annual Growth Rate</p>
+                        <!-- <button href="#shiny-tab-exuberance" data-toggle="tab" type="button" class="btn btn-secondary">Learn More</button> -->
+                    </div>
+                </div>
+                <div class="card mb-3 text-center" style="width: 18rem;">
+                    <div class="card-body">
+                        <h2 class="card-title"> 4.5 %</h2>
+                        <p class="card-text">London Annual Growth Rate</p>
+                        <!-- <button href="#shiny-tab-exuberance" data-toggle="tab" type="button" class="btn btn-secondary">Learn More</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
 

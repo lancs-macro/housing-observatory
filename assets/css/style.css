@@ -20,46 +20,48 @@ p {
 }
 
 
-/* carousel */
+/* section release */
 
-.carousel {
-    margin-bottom: 10em;
+#release {
+    background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
+    border-top: 2px solid;
+    padding: 2rem 1rem;
 }
 
-.col-md-3 {
-    display: inline-block;
-    margin-left: -4px;
+#release p {
+    font-size: 20px !important;
 }
 
-.col-md-3 img {
-    width: 100%;
-    height: auto;
+#release .card {
+    background-color: inherit;
+    color: white;
 }
 
-body .carousel-indicators li {
-    background-color: #4b4b4b;
+#release .latest .card-title{
+    line-height: 60px;
 }
 
-body .carousel-indicators {
-    /* bottom: 0; */
-    bottom: -80px;
-}
-
-body .carousel-control-prev-icon,
-body .carousel-control-next-icon {
-    background-color: #4b4b4b;
-    padding-bottom: -100rem;
-}
-
-body .no-padding {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-img {
+#release  .stat h2:after{
+    margin: 1rem;
+    content: ' ';
     display: block;
-    max-width: 100%;
-    height: auto;
+    border: 2px solid white;
+}
+
+#release h2 {
+    padding-bottom: 0px;
+}
+
+#release .card-text {
+    font-size: 22px !important;
 }
 
 
@@ -75,10 +77,13 @@ img {
 
 
 /* section topics */
+#topics .card-deck {
+    padding-top: 50px;
+}
 
 #topics .card {
     border: 0px;
-    background-color: rgb(239, 239, 239);
+    background-color: inherit;
 }
 
 footer a {
@@ -99,35 +104,6 @@ footer a {
 }
 
 
-/* section release */
-
-#release {
-    border-top: 2px solid;
-}
-
-#release p {
-    font-size: 20px !important;
-}
-
-#release .card {
-    background-color: inherit;
-    color: white;
-}
-
-#release h2:after {
-    margin: 1rem;
-    content: ' ';
-    display: block;
-    border: 2px solid white;
-}
-
-#release h2 {
-    padding-bottom: 0px;
-}
-
-#release .card-text {
-    font-size: 22px !important;
-}
 
 
 /* section markets */

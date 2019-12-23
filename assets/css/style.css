@@ -87,9 +87,18 @@ background-size: 20px 20px;
 }
 
 footer a {
-    color: firebrick !important;
+    color: rgb(153, 47, 47) !important;
 }
 
+.intro-shape {
+    background: linear-gradient(90deg, 
+    rgba(153, 47, 47, 0.8) 0%,
+    /* rgba(153, 47, 47, 0.9) 0%, */
+    rgba(19, 19, 19, 0.9) 70% );
+
+    min-height: 20px;
+    /* background-color:rgba(153, 47, 47, 0.8); */
+}
 
 /* about */
 
@@ -102,8 +111,6 @@ footer a {
     line-height: 1.5;
     color: grey;
 }
-
-
 
 
 /* section markets */
@@ -122,17 +129,17 @@ footer a {
 
 #meet {
     text-align: center;
-    background: #fff;
     /* border-top: 1px solid #d5dadf; */
     padding: 2em 0;
 }
 
 #meet .card {
     border: 0px;
+    background-color: inherit;
 }
 
 #meet h4 {
-    color: #b6adad;
+    color: rgba(153, 47, 47, 0.5);
     margin: 10px 0 0 0;
 }
 
@@ -149,7 +156,6 @@ footer a {
 
 #meet li {
     margin-bottom: 1em;
-    background: #fff;
     color: #333;
 }
 
@@ -224,7 +230,6 @@ footer a {
 #publications .card {
     border: 0px;
     text-align: left;
-    background-color: #efefef;
 }
 
 #publication2 {

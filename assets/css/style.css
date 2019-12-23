@@ -24,16 +24,17 @@ p {
 
 #release {
     background:
-linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-background-color: #131313;
-background-size: 20px 20px;
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
     border-top: 2px solid;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
+    max-height: 200px;
 }
 
 #release p {
@@ -65,18 +66,8 @@ background-size: 20px 20px;
 }
 
 
-/* Median queries for about*/
+/* Section topics */
 
-@media (min-width: 700px) {
-    #about .two-col {
-        text-align: justify;
-        columns: 2;
-        column-gap: 2em;
-    }
-}
-
-
-/* section topics */
 #topics .card-deck {
     padding-top: 50px;
 }
@@ -86,21 +77,30 @@ background-size: 20px 20px;
     background-color: inherit;
 }
 
-footer a {
-    color: rgb(153, 47, 47) !important;
+
+/* section markets */
+
+#markets h2 {
+    padding-top: 1rem;
 }
 
-.intro-shape {
-    background: linear-gradient(90deg, 
-    rgba(153, 47, 47, 0.8) 0%,
-    /* rgba(153, 47, 47, 0.9) 0%, */
-    rgba(19, 19, 19, 0.9) 70% );
-
-    min-height: 20px;
-    /* background-color:rgba(153, 47, 47, 0.8); */
+#markets p {
+    padding: 2rem 1rem;
+    text-align: justify;
 }
 
-/* about */
+/* Section Media  */
+
+#media h6 {
+    color: grey;
+}
+
+
+/* ----------------------------------- */
+/* Tab About */
+/* ---------------------------------- */
+
+/* Section About US */
 
 #about h2 {
     padding-bottom: 0;
@@ -113,19 +113,18 @@ footer a {
 }
 
 
-/* section markets */
+/* Median queries for about*/
 
-#markets h2 {
-    padding-top: 3rem;
+@media (min-width: 700px) {
+    #about .two-col {
+        text-align: justify;
+        columns: 2;
+        column-gap: 2em;
+    }
 }
 
-#markets p {
-    padding: 2rem 1rem;
-    text-align: justify;
-}
 
-
-/* section meet */
+/* Section meet */
 
 #meet {
     text-align: center;
@@ -213,7 +212,6 @@ footer a {
     color: #d5dadf;
 }
 
-
 /*Publications Section*/
 
 #publications {
@@ -236,25 +234,40 @@ footer a {
     margin-bottom: 5rem;
 }
 
+/* ----------------------------------- */
+/* Tab Resources */
+/* ---------------------------------- */
+#comparison .row {
+    margin-top: 3rem;
+}
 
-/* Media Section */
+#comparison h3 {
+    margin-top: 2rem;
+}
 
-#media h6 {
-    color: grey;
+
+#comparison .box-body p {
+    margin: 0 2rem;
+    text-align:justify;
 }
 
 
 /* ----------------------------------- */
-
-
-/* Tab overview */
-
-
+/* Tab Dashboard */
 /* ---------------------------------- */
 
 
-/* Overview Section */
-
-.gap-horizontal {
-    padding: 2rem 0;
+iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 999999;
 }

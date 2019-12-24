@@ -73,21 +73,21 @@
             <div class="card-deck">
                 <div class="card mb-3 text-center" style="width: 18rem;">
                     <div class="latest card-body">
-                        <h2 class="card-title">Release: <br> 2019 Q2</h2>
+                        <h2 class="card-title" id="js-release"></h2>
                         <!-- <h2 class="card-title">2019 Q2</h2>
                         <p class="card-text">Latest Release</p> -->
                     </div>
                 </div>
                 <div class="card mb-3 text-center" style="width: 18rem;">
                     <div class="stat card-body">
-                        <h2 class="card-title"> <p id="stat1"></p> 0.7 % </h2>
+                        <h2 class="card-title" id="js-stat1"> </h2>
                         <p class="card-text">National Annual Growth Rate</p>
                         <!-- <button href="#shiny-tab-exuberance" data-toggle="tab" type="button" class="btn btn-secondary">Learn More</button> -->
                     </div>
                 </div>
                 <div class="card mb-3 text-center" style="width: 18rem;">
                     <div class="stat card-body">
-                        <h2 class="card-title"> <p id="stat2"></p> 4.5 %</h2>
+                        <h2 class="card-title" id="js-stat2"></h2>
                         <p class="card-text">London Annual Growth Rate</p>
                         <!-- <button href="#shiny-tab-exuberance" data-toggle="tab" type="button" class="btn btn-secondary">Learn More</button> -->
                     </div>
@@ -282,19 +282,10 @@
     </script>
     <!--end of footer-->
 
-    
-
-    <!-- <script> 
-        var txt = '{"name":"John", "age":30, "city":"New York"}'
-        var obj = JSON.parse(txt);
-        document.getElementById("stat1").innerHTML = obj.name + ", " + obj.age;
-        document.getElementById("stat2").innerHTML = obj.name + ", " + obj.age;
-    </script> -->
-
 
 </body>
 <!-- <script src="stat-data.json"></script> -->
-<script src="javascript.js"></script>
+<script src="./assets/js/stat.js"></script>
 
 
 </html>

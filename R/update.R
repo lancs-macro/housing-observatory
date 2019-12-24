@@ -9,6 +9,7 @@ ukhp_get <- function(frequency = "monthly", classification = "aggregate", releas
   parse_json(request, simplifyVector = TRUE)
 } 
 
+
 library(uklr)
 library(dplyr)
 library(tidyverse)
@@ -48,4 +49,38 @@ ggplot(tbl, aes(Date, value, col = name)) +
     legend.text = element_text(size = 10)
   )
 
+library(here)
+
 ggsave(here("assets", "img", "comparison.png"), width = 5, height = 4)
+
+
+
+# stats -------------------------------------------------------------------
+
+library(nationwider)
+library(glue)
+
+ldiff <- function(x, n = 4) log(x) - dplyr::lag(log(x), n = n)
+
+uk_data <- ntwd_get("quarterly") %>%
+  filter(key == "Index Q1 1993=100") %>% 
+  mutate(stat1 = ldiff(value)) %>% tail(1)
+
+release_date <- uk_data %>%
+  mutate(release_date = paste0(lubridate::year(Date), " Q",lubridate::quarter(Date))) %>% 
+  pull(release_date)
+
+stat1_num <-  uk_data %>% 
+   pull(stat1) %>% `*`(100) %>% round(2)
+
+stat2_num <- ntwd_get("seasonal_regional") %>%  
+  filter(region == "London", type == "Index") %>% 
+  mutate(stat2 = ldiff(value)) %>% 
+  tail(1) %>% pull(stat2) %>% `*`(100) %>% round(1)
+
+jspath <- here("assets", "js", "stat.js")
+jscode <- readLines(jspath, warn = FALSE)
+json_df <- jsonlite::toJSON(
+  data.frame(release = release_date, stat1 = stat1_num, stat2 = stat2_num), dataframe = "columns")
+jscode[1] <- glue("var txt = '{json_df}';")
+cat(jscode, sep = "\n", file = jspath)

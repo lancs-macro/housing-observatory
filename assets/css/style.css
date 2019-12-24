@@ -34,7 +34,7 @@ p {
     background-size: 20px 20px;
     border-top: 2px solid;
     padding: 1rem 1rem;
-    max-height: 200px;
+    /* max-height: 200px; */
 }
 
 #release p {

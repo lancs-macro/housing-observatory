@@ -70,7 +70,6 @@
 
     <section id="release" class="text-center bg-darkred">
         <div class="container">
-
             <div class="card-deck">
                 <div class="card mb-3 text-center" style="width: 18rem;">
                     <div class="latest card-body">
@@ -81,14 +80,14 @@
                 </div>
                 <div class="card mb-3 text-center" style="width: 18rem;">
                     <div class="stat card-body">
-                        <h2 class="card-title"> 0.7 % </h2>
+                        <h2 class="card-title"> <p id="stat1"></p> 0.7 % </h2>
                         <p class="card-text">National Annual Growth Rate</p>
                         <!-- <button href="#shiny-tab-exuberance" data-toggle="tab" type="button" class="btn btn-secondary">Learn More</button> -->
                     </div>
                 </div>
                 <div class="card mb-3 text-center" style="width: 18rem;">
                     <div class="stat card-body">
-                        <h2 class="card-title"> 4.5 %</h2>
+                        <h2 class="card-title"> <p id="stat2"></p> 4.5 %</h2>
                         <p class="card-text">London Annual Growth Rate</p>
                         <!-- <button href="#shiny-tab-exuberance" data-toggle="tab" type="button" class="btn btn-secondary">Learn More</button> -->
                     </div>
@@ -283,6 +282,19 @@
     </script>
     <!--end of footer-->
 
-</body>
+    
 
-</html>x
+    <!-- <script> 
+        var txt = '{"name":"John", "age":30, "city":"New York"}'
+        var obj = JSON.parse(txt);
+        document.getElementById("stat1").innerHTML = obj.name + ", " + obj.age;
+        document.getElementById("stat2").innerHTML = obj.name + ", " + obj.age;
+    </script> -->
+
+
+</body>
+<!-- <script src="stat-data.json"></script> -->
+<script src="javascript.js"></script>
+
+
+</html>

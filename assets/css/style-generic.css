@@ -97,7 +97,10 @@ footer {
 }
 
 .footer-copyright {
-    background-color: snow !important;
+    border-top: 1px solid rgba(153, 47, 47, 0.1);
+    text-align: right;
+    font-size: 14px;
+    /* background-color: snow; */
 }
 
 
@@ -259,7 +262,10 @@ footer {
 /* ----------------------------------- */
 /* Carousel  */
 /* ---------------------------------- */
-.carousel {
+
+
+
+/* .carousel {
     margin-bottom: 10em;
 }
 
@@ -278,7 +284,6 @@ body .carousel-indicators li {
 }
 
 body .carousel-indicators {
-    /* bottom: 0; */
     bottom: -80px;
 }
 
@@ -286,4 +291,4 @@ body .carousel-control-prev-icon,
 body .carousel-control-next-icon {
     background-color: #4b4b4b;
     padding-bottom: -100rem;
-}
+} */

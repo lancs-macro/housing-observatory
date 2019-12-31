@@ -76,6 +76,10 @@ p {
     border: 0px;
     background-color: inherit;
 }
+#topics .card:hover{
+    color: rgba(153, 47, 47, 0.5);
+}
+
 
 
 /* section markets */
@@ -100,16 +104,45 @@ p {
 /* Tab About */
 /* ---------------------------------- */
 
+
+.parallax {
+    /* The image used */
+    background-image: url("/assets/img/doors-1690423_1920.jpg");
+  
+    /* Set a specific height */
+    height: 60vh;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax-members {
+    /* The image used */
+    background-image: url("/assets/img/street-1431207_1920.jpg");
+  
+    /* Set a specific height */
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 /* Section About US */
 
 #about h2 {
     padding-bottom: 0;
 }
 
-#about h5 {
+#about p {
     padding: 1rem 0;
     line-height: 1.5;
     color: grey;
+    font-weight: 500;
 }
 
 
@@ -137,9 +170,13 @@ p {
     background-color: inherit;
 }
 
+#meet h {
+    margin: 5px 0 0 0;
+}
+
 #meet h4 {
     color: rgba(153, 47, 47, 0.5);
-    margin: 10px 0 0 0;
+    margin: 5px 0 0 0;
 }
 
 #meet a {
@@ -237,6 +274,14 @@ p {
 /* ----------------------------------- */
 /* Tab Resources */
 /* ---------------------------------- */
+
+#resources p {
+    color: grey;
+    font-weight: 500;
+}
+
+
+
 #comparison .row {
     margin-top: 3rem;
 }

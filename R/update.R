@@ -1,3 +1,8 @@
+ldiff <- function(x, n = 4) log(x) - dplyr::lag(log(x), n = n)
+
+# Comparison --------------------------------------------------------------
+
+
 library(jsonlite)
 library(httr)
 
@@ -17,7 +22,8 @@ library(tidyverse)
 lr <- uklr::ukhp_get("england")
 
 lr_tidy <- lr %>% 
-  mutate(region = str_to_title(region)) %>% 
+  group_by(region) %>% 
+  mutate_at(vars(housePriceIndex), ldiff) %>% 
   select(Date = date, region, "Land Registry" = housePriceIndex)
 
 
@@ -28,7 +34,7 @@ ho_tidy <- ho %>%
   pivot_longer(-Date, names_to = "region", values_to = "Housing Observatory")
 
 
-tbl <- full_join(lr_tidy, ho_tidy) %>% 
+tbl <- full_join(lr_tidy, ho_tidy, by = c("Date", "region")) %>% 
   filter(Date >= "1995-02-01") %>% 
   pivot_longer(cols = c("Land Registry", "Housing Observatory")) %>% 
   group_by(name) %>% 
@@ -60,7 +66,6 @@ ggsave(here("assets", "img", "comparison.png"), width = 5, height = 4)
 library(nationwider)
 library(glue)
 
-ldiff <- function(x, n = 4) log(x) - dplyr::lag(log(x), n = n)
 
 uk_data <- ntwd_get("quarterly") %>%
   filter(key == "Index Q1 1993=100") %>% 
@@ -77,6 +82,9 @@ stat2_num <- ntwd_get("seasonal_regional") %>%
   filter(region == "London", type == "Index") %>% 
   mutate(stat2 = ldiff(value)) %>% 
   tail(1) %>% pull(stat2) %>% `*`(100) %>% round(1)
+
+
+# write json
 
 jspath <- here("assets", "js", "stat.js")
 jscode <- readLines(jspath, warn = FALSE)

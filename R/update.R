@@ -22,8 +22,7 @@ library(tidyverse)
 lr <- uklr::ukhp_get("england")
 
 lr_tidy <- lr %>% 
-  group_by(region) %>% 
-  mutate_at(vars(housePriceIndex), ldiff) %>% 
+  mutate(region = str_to_title(region)) %>% 
   select(Date = date, region, "Land Registry" = housePriceIndex)
 
 
@@ -38,18 +37,20 @@ tbl <- full_join(lr_tidy, ho_tidy, by = c("Date", "region")) %>%
   filter(Date >= "1995-02-01") %>% 
   pivot_longer(cols = c("Land Registry", "Housing Observatory")) %>% 
   group_by(name) %>% 
-  mutate(value = value/value[1])
+  # mutate(value = value/value[1]) %>% 
+  mutate_at(vars(value), ldiff)
 
-ggplot(tbl, aes(Date, value, col = name)) +
-  geom_line( size = 0.9) +
+ggplot(tbl, aes(Date, value, col = name, linetype = name)) +
+  geom_line() +
   scale_x_date(date_breaks = "5 years", date_labels = "%Y") +
   theme_bw() +
   ggtitle("House Price Index", sub = "England and Wales") +
   scale_color_manual(values = c("red", "#a6d71c")) +
+  scale_linetype_manual(values = c("twodash", "solid")) +
   theme(
     axis.title = element_blank(),
     legend.title = element_blank(),
-    legend.position = c(0.25, 0.85),
+    legend.position = c(0.25, 0.25),
     legend.background = element_blank(),
     legend.key = element_blank(),
     legend.text = element_text(size = 10)

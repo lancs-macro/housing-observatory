@@ -14,8 +14,7 @@
     width: 100%;
 }
 
-.jumbotron .container h1,
-p {
+.jumbotron .container h1 {
     color: #4b4b4b;
 }
 
@@ -81,6 +80,13 @@ hr.location {
 
 /* Section topics */
 
+#topics .topics-sub {
+    padding: 1rem 0;
+    line-height: 1.5;
+    color: grey;
+    font-weight: 500;
+}
+
 #topics .card-deck {
     padding-top: 50px;
 }
@@ -127,13 +133,6 @@ hr.location {
 
 #about h2 {
     padding-bottom: 0;
-}
-
-#about .about-sub {
-    padding: 1rem 0;
-    line-height: 1.5;
-    color: grey;
-    font-weight: 500;
 }
 
 #about .two-col p {

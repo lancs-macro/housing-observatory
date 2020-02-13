@@ -119,29 +119,28 @@ hr.location {
 }
 
 
-/* Section Media  */
-
-#media h6 {
-    color: grey;
-}
-
-
 /* ----------------------------------- */
+
+
+/* About */
+
+
+/* ---------------------------------- */
 
 
 /* Section About US */
 
-#about h2 {
-    padding-bottom: 0;
+#about {
+    /* /* background-color: rgba(153, 47, 47, 0.1); */
+    color: black;
+}
+
+#about h1 {
+    padding-bottom: 1rem;
 }
 
 #about .two-col p {
     color: #4b4b4b !important;
-}
-
-#about {
-    /* /* background-color: rgba(153, 47, 47, 0.1); */
-    color: black;
 }
 
 
@@ -282,9 +281,18 @@ hr.location {
     padding: 2em 2em;
 }
 
+#publication p {
+    font-size: 12px;
+    margin-bottom: 0rem;
+}
+
+#publications i {
+    padding-top: 1rem;
+}
+
 #publications a {
     padding: 0;
-    margin: 0.5rem;
+    margin: 0px;
     text-align: center;
 }
 
@@ -294,8 +302,21 @@ hr.location {
     background-color: inherit;
 }
 
-#publication2 {
-    margin-bottom: 5rem;
+.publications-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
+/* Section Media  */
+
+#media h6 {
+    color: grey;
+}
+
+.media-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 
@@ -323,6 +344,13 @@ hr.location {
 
 
 /* data-sources */
+
+
+/* exuberance */
+
+#exuberance h3 {
+    padding-bottom: 1.5rem;
+}
 
 
 /* Comparison */

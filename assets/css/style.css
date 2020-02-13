@@ -14,8 +14,7 @@
     width: 100%;
 }
 
-.jumbotron .container h1,
-p {
+.jumbotron .container h1 {
     color: #4b4b4b;
 }
 
@@ -23,13 +22,7 @@ p {
 /* section release */
 
 #release {
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
     border-top: 2px solid;
@@ -37,8 +30,14 @@ p {
     /* max-height: 200px; */
 }
 
-#release p {
-    font-size: 20px !important;
+#release .date {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#release .date h1 {
+    line-height: 1.7;
 }
 
 #release .card {
@@ -46,27 +45,47 @@ p {
     color: white;
 }
 
-#release .latest .card-title{
-    line-height: 60px;
+#release .card-body {
+    padding: 10px;
 }
 
-#release  .stat h2:after{
-    margin: 1rem;
-    content: ' ';
-    display: block;
-    border: 2px solid white;
-}
-
-#release h2 {
-    padding-bottom: 0px;
+#release .card-title {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 #release .card-text {
     font-size: 22px !important;
+    color: white;
+}
+
+hr.location {
+    border: 1px solid white;
+    text-align: center;
+    width: 40%;
+}
+
+#release .stat h2:after {
+    margin: 1rem;
+    content: ' ';
+    display: block;
+    border: 1px solid white;
+}
+
+#release h1 {
+    padding-bottom: 0px;
+    color: white;
 }
 
 
 /* Section topics */
+
+#topics .topics-sub {
+    padding: 1rem 0;
+    line-height: 1.5;
+    color: grey;
+    font-weight: 500;
+}
 
 #topics .card-deck {
     padding-top: 50px;
@@ -76,10 +95,16 @@ p {
     border: 0px;
     background-color: inherit;
 }
-#topics .card:hover{
-    color: rgba(153, 47, 47, 0.5);
+
+#topics a {
+    color: black !important;
+    text-decoration: inherit;
 }
 
+#topics .card:hover {
+    color: rgba(153, 47, 47, 0.5);
+    text-decoration: none;
+}
 
 
 /* section markets */
@@ -93,56 +118,55 @@ p {
     text-align: justify;
 }
 
-/* Section Media  */
-
-#media h6 {
-    color: grey;
-}
-
 
 /* ----------------------------------- */
-/* Tab About */
+
+
+/* About */
+
+
 /* ---------------------------------- */
 
 
-.parallax {
-    /* The image used */
-    background-image: url("/assets/img/doors-1690423_1920.jpg");
-  
-    /* Set a specific height */
-    height: 60vh;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .parallax-members {
-    /* The image used */
-    background-image: url("/assets/img/street-1431207_1920.jpg");
-  
-    /* Set a specific height */
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
 /* Section About US */
 
-#about h2 {
-    padding-bottom: 0;
+#about {
+    /* /* background-color: rgba(153, 47, 47, 0.1); */
+    color: black;
 }
 
-#about p {
-    padding: 1rem 0;
-    line-height: 1.5;
-    color: grey;
-    font-weight: 500;
+#about h1 {
+    padding-bottom: 1rem;
+}
+
+#about .two-col p {
+    color: #4b4b4b !important;
+}
+
+
+/* ---------------------------------- */
+
+.parallax {
+    /* The image used */
+    background-image: url("/assets/img/personal-3285993_1920.png");
+    /* Set a specific height */
+    height: 20vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-members {
+    /* The image used */
+    background-image: url("/assets/img/street-1431207_1920.jpg");
+    /* Set a specific height */
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -249,6 +273,7 @@ p {
     color: #d5dadf;
 }
 
+
 /*Publications Section*/
 
 #publications {
@@ -256,31 +281,98 @@ p {
     padding: 2em 2em;
 }
 
+#publication p {
+    font-size: 12px;
+    margin-bottom: 0rem;
+}
+
+#publications i {
+    padding-top: 1rem;
+}
+
 #publications a {
     padding: 0;
-    margin: 0.5rem;
+    margin: 0px;
     text-align: center;
 }
 
 #publications .card {
     border: 0px;
     text-align: left;
+    background-color: inherit;
 }
 
-#publication2 {
-    margin-bottom: 5rem;
+.publications-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
+
+/* Section Media  */
+
+#media h6 {
+    color: grey;
+}
+
+.media-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
 
 /* ----------------------------------- */
+
+
 /* Tab Resources */
+
+
 /* ---------------------------------- */
 
+.subtitle {
+    color: grey;
+    padding-bottom: 1em;
+}
+
+
+/* Resources */
+
 #resources p {
+    padding: 1em 0;
     color: grey;
     font-weight: 500;
 }
 
 
+/* data-sources */
+
+
+/* exuberance */
+
+#exuberance h3 {
+    padding-bottom: 1.5rem;
+}
+
+
+/* Comparison */
+
+#comparison span {
+    margin-left: 20px;
+}
+
+.new {
+    background-color: black;
+    /* rgba(153, 47, 47, 0.9); */
+    border-radius: 50%;
+    /* display: inline-block; */
+    font-size: 26px !important;
+    padding: 4px;
+    color: white;
+    text-align: center;
+    height: 22px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    width: 65px;
+}
 
 #comparison .row {
     margin-top: 3rem;
@@ -290,17 +382,19 @@ p {
     margin-top: 2rem;
 }
 
-
 #comparison .box-body p {
-    margin: 0 2rem;
-    text-align:justify;
+    margin: 2rem;
+    text-align: justify;
 }
 
 
 /* ----------------------------------- */
-/* Tab Dashboard */
-/* ---------------------------------- */
 
+
+/* Tab Dashboard */
+
+
+/* ---------------------------------- */
 
 iframe {
     position: fixed;

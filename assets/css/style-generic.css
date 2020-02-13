@@ -1,7 +1,7 @@
-
 body a {
     color: rgba(153, 47, 47) !important;
 }
+
 body .no-padding {
     padding-left: 0;
     padding-right: 0;
@@ -13,14 +13,18 @@ img {
     height: auto;
 }
 
-
 .page-content {
     flex: 1 0 auto;
     width: 100%;
 }
 
+
 /* ----------------------------------- */
+
+
 /* Section */
+
+
 /* ---------------------------------- */
 
 .jumbotron {
@@ -32,7 +36,7 @@ section {
     padding: 3rem 1rem;
 }
 
-section h2{
+section h2 {
     padding-bottom: 2rem;
 }
 
@@ -62,10 +66,23 @@ section h2{
     border: 0px !important;
 }
 
-/* ----------------------------------- */
-/* Footer */
-/* ---------------------------------- */
+hr.section {
+    /* border: 2px solid rgba(153, 47, 47, 0.3);
+    border-radius: 1px; */
+    width: 70%;
+    margin: auto;
+    margin-top: 2%;
+    border: 1px solid gray;
+}
 
+
+/* ----------------------------------- */
+
+
+/* Footer */
+
+
+/* ---------------------------------- */
 
 html {
     position: relative;
@@ -77,6 +94,7 @@ footer {
     padding-top: 4rem;
     position: absolute;
     bottom: 0;
+    font-size: 13px;
     width: 100%;
     height: 60px;
     /* line-height: 60px; */
@@ -86,7 +104,6 @@ footer {
 #sticky-footer {
     flex-shrink: none;
 }
-
 
 #sticky-footer a {
     color: inherit;
@@ -105,12 +122,17 @@ footer {
 
 
 /* ----------------------------------- */
+
+
 /* Tab navbar */
+
+
 /* ---------------------------------- */
 
 .nav-container {
     margin: 90px;
 }
+
 
 /* .nav-shadow{
     box-sizing: border-box;
@@ -156,20 +178,16 @@ footer {
 
 .navbar-after {
     margin-top: 95px;
-    background: linear-gradient(90deg, 
-    rgba(153, 47, 47, 0.8) 0%,
-    /* rgba(153, 47, 47, 0.9) 0%, */
-    rgba(19, 19, 19, 0.9) 70% );
+    background: linear-gradient(90deg, rgba(153, 47, 47, 0.8) 0%, /* rgba(153, 47, 47, 0.9) 0%, */
+    rgba(19, 19, 19, 0.9) 70%);
     min-height: 8px;
     /* background-color:rgba(153, 47, 47, 0.8); */
 }
 
-
 @media screen and (max-width: 992px) {
-    .nav-container{
-        margin:50px
+    .nav-container {
+        margin: 50px
     }
-
     .navbar-brand div {
         font-size: 20px !important;
         padding-left: 1.5rem;
@@ -241,28 +259,27 @@ footer {
     box-shadow: none;
 }
 
-
 @media screen and (max-width: 992px) {
-   .navbar-collapse {
-    padding-top: 15px;
+    .navbar-collapse {
+        padding-top: 15px;
+    }
+    .navbar-collapse .nav-item .btn {
+        margin-top: 8px;
+        margin-right: -10px;
+    }
+    .navbar {
+        border-bottom: 1px solid black;
+    }
 }
-
-.navbar-collapse .nav-item .btn {
-    margin-top: 8px;
-    margin-right: -10px;
-}
-.navbar {
-    border-bottom: 1px solid black;
-}
-}
-
-
 
 
 /* ----------------------------------- */
-/* Carousel  */
-/* ---------------------------------- */
 
+
+/* Carousel  */
+
+
+/* ---------------------------------- */
 
 
 /* .carousel {

@@ -1,3 +1,8 @@
+ldiff <- function(x, n = 4) log(x) - dplyr::lag(log(x), n = n)
+
+# Comparison --------------------------------------------------------------
+
+
 library(jsonlite)
 library(httr)
 
@@ -28,22 +33,24 @@ ho_tidy <- ho %>%
   pivot_longer(-Date, names_to = "region", values_to = "Housing Observatory")
 
 
-tbl <- full_join(lr_tidy, ho_tidy) %>% 
+tbl <- full_join(lr_tidy, ho_tidy, by = c("Date", "region")) %>% 
   filter(Date >= "1995-02-01") %>% 
   pivot_longer(cols = c("Land Registry", "Housing Observatory")) %>% 
   group_by(name) %>% 
-  mutate(value = value/value[1])
+  # mutate(value = value/value[1]) %>% 
+  mutate_at(vars(value), ldiff)
 
-ggplot(tbl, aes(Date, value, col = name)) +
-  geom_line( size = 0.9) +
+ggplot(tbl, aes(Date, value, col = name, linetype = name)) +
+  geom_line() +
   scale_x_date(date_breaks = "5 years", date_labels = "%Y") +
   theme_bw() +
   ggtitle("House Price Index", sub = "England and Wales") +
   scale_color_manual(values = c("red", "#a6d71c")) +
+  scale_linetype_manual(values = c("twodash", "solid")) +
   theme(
     axis.title = element_blank(),
     legend.title = element_blank(),
-    legend.position = c(0.25, 0.85),
+    legend.position = c(0.25, 0.25),
     legend.background = element_blank(),
     legend.key = element_blank(),
     legend.text = element_text(size = 10)
@@ -60,7 +67,6 @@ ggsave(here("assets", "img", "comparison.png"), width = 5, height = 4)
 library(nationwider)
 library(glue)
 
-ldiff <- function(x, n = 4) log(x) - dplyr::lag(log(x), n = n)
 
 uk_data <- ntwd_get("quarterly") %>%
   filter(key == "Index Q1 1993=100") %>% 
@@ -77,6 +83,9 @@ stat2_num <- ntwd_get("seasonal_regional") %>%
   filter(region == "London", type == "Index") %>% 
   mutate(stat2 = ldiff(value)) %>% 
   tail(1) %>% pull(stat2) %>% `*`(100) %>% round(1)
+
+
+# write json
 
 jspath <- here("assets", "js", "stat.js")
 jscode <- readLines(jspath, warn = FALSE)

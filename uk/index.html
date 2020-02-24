@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UK Housing Observatory</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-generic.css">
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="assets/img/minimal.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
+
+    <meta property="og:description" content="">
+    <meta property="og:image" content="assets/img/minimal.png">
+
+    <!-- https://www.w3schools.com/howto/howto_google_fonts.asp -->
+    <link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+    <!-- Academic icons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- Bootsrap Theme Journal -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+
+<body>
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function() {
+            $("#nav-placeholder").load("assets/nav.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <!-- Start the dashboard silently to reduce the loading time -->
+    <iframe src="https://lancs-macro.shinyapps.io/uk-housing-observatory-dashboard" style="visibility: hidden;"></iframe>
+
+
+    <div class="jumbotron jumbotron-index jumbotron-fluid">
+        <div class="container col-md-6 col-sm-12">
+        </div>
+    </div>
+
+    <section id="release" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 date">
+                    <div class=" col-md-12" style="padding: 0;">
+                        <h1>Release <br> 2019: Q1</h1>
+                    </div>
+                </div>
+                <div class="col-md-5 ">
+                    <div class="row">
+                        <div class="stat col-md-12">
+                            <h1>National</h1>
+                            <hr class="location">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="stat card-body">
+                                    <h2 class="card-title"> 1.2 </h2>
+                                    <p class="card-text">House Price Change</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="stat card-body">
+                                    <h2 class="card-title"> 1.2 </h2>
+                                    <p class="card-text">Affordability Index Change</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class=>London</h1>
+                            <hr class="location">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="stat card-body">
+                                    <h2 class="card-title"> 1.2 </h2>
+                                    <p class="card-text">House Price Change</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="stat card-body">
+                                    <h2 class="card-title">1.2</h2>
+                                    <p class="card-text">Affordability Index Change</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section Topics -->
+    <section id="topics" class="text-center">
+        <div class="container">
+            <h2>Discover the UK Housing Observatory</h2>
+            <p class="topics-sub">A project developed aimed at improving understanding of the UK national and regional house price dynamics.</p>
+            <!-- <p> Dashboard for interactive </p>-->
+            <!-- <hr class="section"> -->
+
+            <div class="card-deck">
+                <a href="dashboard.html">
+                    <div class="card mb-4 text-center" style="width: 22rem;">
+
+                        <i class="fas fa-chart-area fa-6x"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">Financial Stability</h4>
+                            <p class="card-text">Monitoring Exuberance and Collapses in Housing Markets</p>
+                        </div>
+
+                    </div>
+                </a>
+                <a href="dashboard.html">
+                    <div class="card mb-4 text-center " style="width: 21rem;">
+                        <i class="fa fa-line-chart"></i>
+
+                        <i class="fas fa-underline fa-6x"></i>
+                        <div class="card-body ">
+                            <h4 class="card-title">Uncertainty Index</h4>
+                            <p class="card-text">Economic Policy Uncertainty in Housing Markets</p>
+                            <!-- <a href="#" class="btn btn-secondary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                </a>
+                <a href="dashboard.html">
+                    <div class="card mb-4 text-center " style="width: 22rem;">
+                        <i class="fa fa-line-chart"></i>
+
+                        <i class="fas fa-house-damage fa-6x"></i>
+                        <div class="card-body ">
+                            <h4 class="card-title">Housing Observatory Price Index</h4>
+                            <p class="card-text"> The new Repeated Sales Index for three levels of Territorial Units</p>
+                            <!-- <a href="#" class="btn btn-secondary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="markets" class="text-center bg-gray2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <img src="assets/img/location-map.svg" width="240px" class="rounded text-center" alt="...">
+                    <!-- <img src="static/icon-map.png" width="300px" class="rounded float-left" alt="..."> -->
+                </div>
+                <div class="col-12 col-md-8">
+                    <h2>National & Regional Markets</h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        $(function() {
+            $("#footer-placeholder").load("assets/footer.html");
+        });
+    </script>
+    <!--end of footer-->
+
+
+</body>
+<!-- <script src="stat-data.json"></script> -->
+<script src="./assets/js/stat.js"></script>
+
+
+</html>

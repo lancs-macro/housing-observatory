@@ -1,0 +1,67 @@
+html {
+    font-family: 'Oswald', sans-serif;
+}
+
+#groups .card {
+    margin: 2rem;
+    border: 0px;
+}
+
+#groups .card-title {
+    font-family: 'Oswald', sans-serif;
+    padding: 1rem;
+    line-height: 3rem;
+}
+
+
+/* Hover */
+
+.hover08 figure img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.hover08 figure:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    box-shadow: 0 0 20px rgba(33, 33, 33, .2);
+}
+
+
+/* Footer */
+
+html {
+    position: relative;
+    min-height: 100%;
+    margin-bottom: 0px;
+}
+
+footer {
+    padding-top: 4rem;
+    position: absolute;
+    bottom: 0;
+    font-size: 13px;
+    width: 100%;
+    /* height: 60px; */
+}
+
+#sticky-footer {
+    flex-shrink: none;
+}
+
+#sticky-footer a {
+    color: inherit;
+}
+
+#sticky-footer a:hover {
+    color: white;
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(155, 155, 155, 0.3);
+    text-align: right;
+    font-size: 14px;
+}

@@ -134,12 +134,12 @@ hr.location {
 }
 
 #markets a {
-    opacity: 0.8;
+    color: rgb(34, 34, 34) !important;
 }
 
 #markets a:hover {
     opacity: 1;
-    color: darkred !important;
+    color: white !important;
     text-decoration: none;
 }
 
@@ -380,15 +380,29 @@ hr.location {
 
 /* Comparison */
 
-#comparison span {
-    margin-left: 20px;
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
 }
 
-.new {
+#comparison span {
+    margin-right: 40px;
+}
+
+
+/* .new {
     background-color: black;
-    /* rgba(153, 47, 47, 0.9); */
     border-radius: 50%;
-    /* display: inline-block; */
     font-size: 26px !important;
     padding: 4px;
     color: white;
@@ -397,7 +411,7 @@ hr.location {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     width: 65px;
-}
+} */
 
 #comparison .row {
     margin-top: 3rem;

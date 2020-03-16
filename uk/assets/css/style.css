@@ -30,13 +30,18 @@
     /* max-height: 200px; */
 }
 
+#release h3 {
+    padding-bottom: 0px;
+    color: white;
+}
+
 #release .date {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
-#release .date h1 {
+#release .date h3 {
     line-height: 1.7;
 }
 
@@ -55,7 +60,7 @@
 }
 
 #release .card-text {
-    font-size: 22px !important;
+    font-size: 18px !important;
     color: white;
 }
 
@@ -65,26 +70,36 @@ hr.location {
     width: 40%;
 }
 
-#release .stat h2:after {
+#release .stat h4:after {
     margin: 1rem;
     content: ' ';
     display: block;
     border: 1px solid white;
 }
 
-#release h1 {
-    padding-bottom: 0px;
-    color: white;
+
+/* Section intro */
+
+#intro {
+    padding: 6rem 0 6rem 0;
+}
+
+#intro h1 {
+    padding-bottom: 2rem;
+}
+
+#intro .topics-sub {
+    line-height: 1.5;
+    color: grey;
+    font-weight: 600;
 }
 
 
 /* Section topics */
 
-#topics .topics-sub {
-    padding: 1rem 0;
-    line-height: 1.5;
-    color: grey;
-    font-weight: 500;
+#topics p {
+    color: gray;
+    font-weight: 600;
 }
 
 #topics .card-deck {
@@ -116,6 +131,16 @@ hr.location {
 #markets p {
     padding: 2rem 1rem;
     text-align: justify;
+}
+
+#markets a {
+    opacity: 0.8;
+}
+
+#markets a:hover {
+    opacity: 1;
+    color: darkred !important;
+    text-decoration: none;
 }
 
 
@@ -281,9 +306,9 @@ hr.location {
     padding: 2em 2em;
 }
 
-#publication p {
-    font-size: 12px;
-    margin-bottom: 0rem;
+#publications p {
+    font-size: 15px;
+    margin-bottom: 0.3rem !important;
 }
 
 #publications i {
@@ -304,7 +329,7 @@ hr.location {
 
 .publications-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 

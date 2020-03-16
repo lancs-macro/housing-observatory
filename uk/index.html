@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/style-generic.css">
 
     <!-- favicons -->
-    <link rel="shortcut icon" href="assets/img/minimal.png" />
+    <link rel="shortcut icon" href="assets/img/logo.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
@@ -31,6 +31,8 @@
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+    <!-- Hover.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -71,13 +73,13 @@
             <div class="row">
                 <div class="col-md-2 date">
                     <div class=" col-md-12" style="padding: 0;">
-                        <h1 id="js-release"></h1>
+                        <h3 id="js-release"></h3>
                     </div>
                 </div>
                 <div class="col-md-5 ">
                     <div class="row">
                         <div class="stat col-md-12">
-                            <h1>National</h1>
+                            <h3>National</h3>
                             <hr class="location">
                         </div>
                     </div>
@@ -85,7 +87,7 @@
                         <div class="col-md-6">
                             <div class="card mb-3">
                                 <div class="stat card-body">
-                                    <h2 class="card-title" id="js-price-uk"> </h2>
+                                    <h4 class="card-title" id="js-price-uk"> </h4>
                                     <p class="card-text">House Price Change</p>
                                 </div>
                             </div>
@@ -93,8 +95,8 @@
                         <div class="col-md-6">
                             <div class="card mb-3">
                                 <div class="stat card-body">
-                                    <h2 class="card-title" id="js-afford-uk"></h2>
-                                    <p class="card-text">Affordability Index Change</p>
+                                    <h4 class="card-title" id="js-afford-uk"></h4>
+                                    <p class="card-text">Affordability Change</p>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +106,7 @@
                 <div class="col-md-5">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class=>London</h1>
+                            <h3 class=>London</h3>
                             <hr class="location">
                         </div>
                     </div>
@@ -112,7 +114,7 @@
                         <div class="col-md-6">
                             <div class="card mb-3">
                                 <div class="stat card-body">
-                                    <h2 class="card-title" id="js-price-london"></h2>
+                                    <h4 class="card-title" id="js-price-london"></h4>
                                     <p class="card-text">House Price Change</p>
                                 </div>
                             </div>
@@ -120,8 +122,8 @@
                         <div class="col-md-6">
                             <div class="card mb-3">
                                 <div class="stat card-body">
-                                    <h2 class="card-title" , id="js-afford-london"></h2>
-                                    <p class="card-text">Affordability Index Change</p>
+                                    <h4 class="card-title" , id="js-afford-london"></h4>
+                                    <p class="card-text">Affordability Change</p>
                                 </div>
                             </div>
                         </div>
@@ -134,15 +136,26 @@
 
 
     <!-- Section Topics -->
-    <section id="topics" class="text-center">
+    <section id="intro" class="text-center">
         <div class="container">
-            <h2>Discover the UK Housing Observatory</h2>
-            <p class="topics-sub">A project developed aimed at improving understanding of the UK national and regional house price dynamics.</p>
+            <h1>UK Housing Observatory</h1>
+            <h5 class="topics-sub">A project developed aimed at improving understanding of the UK national and regional house price dynamics.</h5>
             <!-- <p> Dashboard for interactive </p>-->
             <!-- <hr class="section"> -->
+            <!-- 
+            <p>
+                The UK housing observatory deals with the development of financial stability and uncertainty indicators for UK real estate markets, as well as with the construction of New House Price indices. This page is an interactive platform to access these statistics.
+            </p>
 
-            We have developed an interactive analysis of the Financial Stability, Uncertainty in housing markets, and new Price Indices developed by us. To find out more about them click on the icon below in on the dashboard tab at the top of this page.
+            <p>
+                To find out more (further information) go to dashbard. We have developed an interactive analysis of the Financial Stability, Uncertainty in housing markets, and new Price Indices developed by us. To find out more about them click on the icon below in
+                on the dashboard tab at the top of this page.
+            </p> -->
 
+    </section>
+
+    <section id="topics" class="text-center bg-gray">
+        <div class="container">
             <div class="card-deck">
                 <a href="dashboard.html">
                     <div class="card mb-4 text-center" style="width: 22rem;">
@@ -183,20 +196,37 @@
         </div>
     </section>
 
-    <section id="markets" class="text-center bg-gray2">
+    <section id="markets" class="text-center">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-4">
-                    <img src="assets/img/location-map.svg" width="240px" class="rounded text-center" alt="...">
+                <div class="col-12 col-md-5">
+                    <img src="assets/img/ukmap-dark.png" width="350x" class="rounded text-center" alt="...">
                     <!-- <img src="static/icon-map.png" width="300px" class="rounded float-left" alt="..."> -->
                 </div>
-                <div class="col-12 col-md-8">
-                    <h2>National & Regional Markets</h2>
-                    <p></p>
+                <div class="col-12 col-md-7">
+                    <div class="container">
+
+                        <h2>Discover & Interact</h2>
+                        <!-- <h5 style="color: gray;font-weight: 600;">National and Regional Markets</h5> -->
+                        <p>
+                            You will find a comprehensive set of information and interactive tools to perform real-time monitoring of real estate markets both at the national and regional level in the UK. The analyses provided relate to sustainability of house prices, affordability,
+                            and uncertainty in the housing market. In addition, we make available to you a new price index that is disaggregated up to level NUTS 3 such that you can perform your own analysis. This webpage provides an interactive platform
+                            to access these statistics.
+                        </p>
+
+                        <h5 class="text-center">
+                            <a href="dashboard.html" class="hvr-pulse-grow button"> 
+                                Navigate to Dashboard to find out more !
+                            </a>
+                        </h5>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+
 
 
     <!--Footer -->

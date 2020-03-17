@@ -2,10 +2,10 @@ html {
     font-family: 'Oswald', sans-serif;
 }
 
-#groups .card {
+ #groups .card {
     padding: 2rem;
     border: 0px;
-}
+} 
 
 #groups .card-title {
     font-family: 'Oswald', sans-serif;
@@ -13,6 +13,10 @@ html {
     line-height: 3rem;
 }
 
+#groups img {
+    width: 100%;
+    height: auto;
+}
 
 /* Hover */
 

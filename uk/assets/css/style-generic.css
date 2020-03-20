@@ -189,12 +189,12 @@ footer {
         margin: 50px
     }
     .navbar-brand div {
-        font-size: 20px !important;
+        font-size: 16px !important;
         padding-left: 1.5rem;
     }
     .navbar-brand img {
-        max-width: 40px;
-        max-height: 40px;
+        max-width: 30px;
+        max-height: 30px;
     }
     .navbar-after {
         margin-top: 55px

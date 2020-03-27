@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resources | UK Housing Observatory</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-generic.css">
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="assets/img/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
+
+    <meta property="og:description" content="">
+    <meta property="og:image" content="assets/img/logo.png">
+
+    <!-- https://www.w3schools.com/howto/howto_google_fonts.asp -->
+    <link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+    <!-- Academic icons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- Bootsrap Theme Journal -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+
+<body>
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function() {
+            $("#nav-placeholder").load("nav.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+
+
+    <section id="resources" class="text-center">
+        <div class="container col-md-6 col-sm-12">
+            <h1>Resources</h1>
+            <p>Discover our key resources including our data archive, resources, methodology and econometrics code.</p>
+            <hr class="section">
+        </div>
+    </section>
+
+    <!-- Data Sources Section -->
+    <section id="data-sources" class="bg-gray">
+        <h2 class="text-center">Data Sources </h2>
+
+        <div class="container">
+            <p class="text-justify">
+                House Price data are obtained from Nationwide. Regional House Price indices for 13 regions of the UK are published quarterly by Nationwide. To transform the data into real values, each regional series is deflated with consumer price index (CPI). Regional
+                income data is obtained from the Family Expenditure Survey (FES). For each year, starting from 1975, the dataset is split by region and the data on average total household's weekly expenditure is extracted. The annual data is then interpolated
+                to obtain quarterly series.
+            </p>
+            <ul>
+                <li>
+                    The FES runs from 1961 to 2001. From 2001 FES was replaced by a new survey, the Expenditure and Food Survey (EFS), which became the Living Costs and Food Survey (LCF) from 2008.
+                </li>
+                <li>
+                    Due to the differences in regional classifications, Outer Metropolitan and Outer South East are assumed to correspond to the South East region in the regional classification adopted by the FES.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="text-center" id="exuberance">
+
+        <h2>Financial Stability</h2>
+        <h3>Monitoring Exuberance and Collapses in Housing Markets</h3>
+
+        <div class="container text-justify">
+            <p>
+                A rapid pace of real house price appreciation by itself does not necessarily imply that real house prices are becoming out of step with fundamentals. Still, we recognize that real house price increases today could become out of step with fundamentals
+                supported instead by the expectation of robust future price increases. An expectations-driven real house price appreciation may lead to a misallocation of resources in the economy and distorted investment patterns. Therefore, monitoring
+                for such episodes of exuberance (booms) and collapse (busts) in housing markets may help avoid a repeat of the economic trauma caused by the international boom-bust housing cycle that preceded the 2008 Great Recession (Pavlidis et al.,
+                2016).
+            </p>
+
+        </div>
+    </section>
+
+    <section class="bg-gray" id="hpu">
+        <h2 class="text-center">House Price Uncertainty</h2>
+        <div class="container text-justify">
+            <p>
+                The House Price Uncertainty (HPU) Index is constructed using the methodology suggested by Baker, Bloom and Davis (2016). The HPU is an index of search results from five large newspapers in the UK: The Guardian, The Independent, The Times, Financial Times
+                and Daily Mail. In particular, we use LexisNexis digital archives of these newspapers to obtain a quarterly count of articles that contain the following three terms: ‘uncertainty’ or ‘uncertain’; ‘housing’ or ‘house prices’ or ‘real estate’;
+                and one of the following: ‘policy’, ‘regulation’, ‘Bank of England, ‘mortgage’, ‘interest rate’, ‘stamp-duty’, ‘tax’, ‘bubble’ or ‘buy-to-let’ (including variants like ‘uncertainties’, ‘housing market’ or ‘regulatory’). To meet the search
+                criteria an article must contain terms in all three categories.
+            </p>
+            <p>
+                The resulting series of search counts is then scaled by the total number of articles in the given newspaper and in the given quarter. Finally, to obtain the HPU index, we average across the five newspapers by quarter and normalise the index to a mean
+                of 100.The Index starts in 1982 Q1.
+            </p>
+
+            <h4>Stylized Facts:</h4>
+            <ul class="text-left">
+                <li>
+                    The UK has experienced two recessions over the period 1982-2018. The first one 1990 Q3 –1991 Q3 and the second one 2008 Q2 –2009 Q2. HPUincreases ahead of those two periods and it reaches an (up to that point) historical maximum right at the beginningof
+                    the economic recessions (228 in 1990 Q3 and 316in 2008 Q3).
+                </li>
+                <li>
+                    The Uncertainty Index increased ahead of the EU Referendum and nearly reached its 2008Q3 level right after the referendum took place (306in 2016 Q3). While the index dropped during the first half of 2018 to a value close to 100, it started rapidly increasing
+                    in the second half of the year, reaching 211 at the start of 2019. Uncertainty generated by (i) the domestic political situation, (ii) the negotiations with the EU about the withdrawal agreement, and (iii) the outcome of Brexit and
+                    its consequences had a direct impact on the housing market.
+                </li>
+                <li>
+                    The volatility of the Index significantly increased since 2007 and remained high ever since.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="comparison">
+        <h2 class="text-center"> <span class="badge"> Our New Index </span> Housing Observatory Price Index - HOPI </h1>
+            <div class="container text-justify">
+                <p>
+                    A major obstacle in constructing accurate house price indices is the high degree of heterogeneity of
+                    real estate properties. To account for price differences in homes with varying characteristics, the
+                    Housing Observatory Price Indices (HOPIs) are based on the popular repeat-sales methodology of Case
+                    and Shiller. Repeat sales methodologies control for property characteristics by assessing how
+                    valuations of the same property change over time and are recognised as one the most reliable means
+                    to measuring house price inflation. Such methodologies are used for the construction of, among
+                    others, the S&P CoreLogic Case-Shiller home price indices, the Federal Housing Finance Agency's (FHFA) house price index, and the First American CoreLogic's loan-performance home price index.
+                <p>
+                    
+                <div class="row" style = "margin-top:0px; padding-top:10px;">
+                    <div class="col-12 col-md-6">
+                        <img src="assets/img/comparison.png" alt="House Price Index Comparison">
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <h3 class="text-center">HOPI and HPI </h3>
+                        <p class="text-justify" style = "padding-top: 20px;">
+                            For the construction of HOPIs, we employ data from the HM Land Registry Price Paid
+                            database, which covers all property sales in England and Wales that are sold for
+                            value and are lodged with the HM Land Registry for registration. HM Land Registry
+                            also constructs a <a href="https://landregistry.data.gov.uk/app/ukhpi"> UK House
+                                Price Index (HPI) </a> that applies a statistical method called
+                            hedonic regression model, to the various sources of data on property prices and attributes
+                            to produce estimates of the change in house prices each period.
+                        </p>
+                    </div>
+
+                </div>
+    </section>
+
+
+
+    <!--Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        $(function() {
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+    <!--end of footer-->
+
+</body>
+
+</html

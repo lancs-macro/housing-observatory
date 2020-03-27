@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Housing Observatory </title>
-    <meta property="description" content=" A project developed aimed at improving understanding of the national and regional house price dynamics.">
-    <meta name="author" content="Lancaster Univeristy, Department of Economics">
-    <meta name="keywords"
-        content="Real Estate Markets, Financial Stability, Exuberance Indicators, Housing Uncertainty Index">
-    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UK Housing Observatory</title>
+
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-generic.css">
+
+    <!-- favicons -->
     <link rel="shortcut icon" href="assets/img/logo.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -19,18 +19,8 @@
     <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
     <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content = "Housing Observatory">
-    <meta property="og:site_name" content="Housing Observatory">
-    <meta property="og:type" content = "website">
-    <meta property="og:url" content="https://housing-observatory.com/">
-    <meta property="og:description"
-        content=" A project developed aimed at improving understanding of the national and regional house price dynamics.">
+    <meta property="og:description" content="">
     <meta property="og:image" content="assets/img/logo.png">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Housing Observatory">
-    <meta name="twitter:url" content="https://housing-observatory.com/">
-    <meta property="twitter:image" content="assets/img/logo.png">
 
     <!-- https://www.w3schools.com/howto/howto_google_fonts.asp -->
     <link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
@@ -41,6 +31,9 @@
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+    <!-- Hover.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover.css">
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
@@ -48,14 +41,25 @@
     <!-- Bootsrap Theme Journal -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=TRACKING_ID"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129604855-5"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'UA-129604855-5');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129604855-5');
     </script>
 
 
@@ -63,71 +67,202 @@
 
 <body>
 
-    <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand"
-            style="float:none;margin:0 auto;display: block;text-align: center; font-size: 28px;font-family: 'Oswald', sans-serif;font-variant: small-caps;font-variant: small-caps;">Housing
-            Observatory</span>
-    </nav>
-    
-    <!-- <section style="padding-top: 3rem;">
-        <div class="container text-center" >
-            <h4 style = "color: gray;">
-               Understanding real estate markets dynamics
-            </h4>
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function() {
+            $("#nav-placeholder").load("nav.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <!-- Start the dashboard silently to reduce the loading time -->
+    <iframe src="https://lancs-macro.shinyapps.io/uk-housing-observatory-dashboard" style="visibility: hidden;"></iframe>
+
+
+    <div class="jumbotron jumbotron-index jumbotron-fluid">
+        <div class="container col-md-6 col-sm-12">
         </div>
-    </section> -->
+    </div>
 
-
-    <section id="groups" style="padding-top: 0rem;">
+    <section id="release" class="text-center">
         <div class="container">
-            <div class="row justify-content-md-center"> 
-            <div class="card-deck">
-                <div class="card">
-                    <div class="card-body">
-                        <h1 class="card-title text-center" style="color:rgb(153, 47, 47);font-variant: small-caps;"">
-                            United Kingdom
-                        </h1>
-                        <div class="hover08">
-                            <a href="./uk/index.html">
-                                <figure>
-                                    <img src="assets/img/housingobservatory400.jpg" alt="UK Housing Observatory website"/>
-                                </figure>
-                            </a>
-                        </div>
+            <div class="row">
+                <div class="col-12 col-md-2 date">
+                    <div class=" col-md-10" style="padding: 0;">
+                        <h3> Release: 
+                            <span id="js-release"> </span>
+                        </h3>
+                        <!-- <h3 id="js-release"></h3> -->
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h1 class="card-title text-center" style="color:rgb(49, 70, 88);font-variant: small-caps;">
-                            International
-                        </h1>
-                        <div class="hover08">
-                            <a href="./international/index.html">
-                                <figure>
-                                    <img src="assets/img/banner-home400.jpeg" alt="International Housing Observatory website" />
-                                </figure>
-                            </a>
+                <div class="col-md-5 ">
+                    <div class="row">
+                        <div class="stat col-12 col-md-12">
+                            <h3>National</h3>
+                            <hr class="location">
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-6 col-md-6">
+                            <div class="card mb-3">
+                                <div class="stat card-body">
+                                    <h4 class="card-title" id="js-price-uk"> </h4>
+                                    <p class="card-text">House Price Change</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="card mb-3">
+                                <div class="stat card-body">
+                                    <h4 class="card-title" id="js-afford-uk"></h4>
+                                    <p class="card-text">Affordability Change</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-12 col-md-12">
+                            <h3 class=>London</h3>
+                            <hr class="location">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-md-6">
+                            <div class="card mb-3">
+                                <div class="stat card-body">
+                                    <h4 class="card-title" id="js-price-london"></h4>
+                                    <p class="card-text">House Price Change</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="card mb-3">
+                                <div class="stat card-body">
+                                    <h4 class="card-title" , id="js-afford-london"></h4>
+                                    <p class="card-text">Affordability Change</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <p class="text-center" style="font-size:18px;font-weight: 500;padding: 0 0 5rem 3rem;"> Click on the figures to be redirected</p>
         </div>
     </section>
 
 
-    <!-- Footer -->
-    <footer class="page-footer unique-color-dark">
+    <!-- Section Topics -->
+    <section id="intro" class="text-center">
+        <div class="container">
+            <h1>UK Housing Observatory</h1>
+            <h5 class="topics-sub">A project developed aimed at improving understanding of the UK national and regional house price dynamics.</h5>
+            <!-- <p> Dashboard for interactive </p>-->
+            <!-- <hr class="section"> -->
+            <!-- 
+            <p>
+                The UK housing observatory deals with the development of financial stability and uncertainty indicators for UK real estate markets, as well as with the construction of New House Price indices. This page is an interactive platform to access these statistics.
+            </p>
 
-        <!-- Copyright -->
-        <div class="container text-center">
-            <div class="footer-copyright py-3"> © 2020 Copyright &nbsp; | &nbsp; Housing Observatory
+            <p>
+                To find out more (further information) go to dashbard. We have developed an interactive analysis of the Financial Stability, Uncertainty in housing markets, and new Price Indices developed by us. To find out more about them click on the icon below in
+                on the dashboard tab at the top of this page.
+            </p> -->
+
+    </section>
+
+    <section id="topics" class="text-center bg-gray">
+        <div class="container">
+            <div class="card-deck">
+                <a href="dashboard.html">
+                    <div class="card mb-4 text-center" style="width: 20rem;">
+
+                        <i class="fas fa-chart-area fa-6x"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">Financial Stability</h4>
+                            <p class="card-text">Monitoring Exuberance and Collapses in Housing Markets</p>
+                        </div>
+
+                    </div>
+                </a>
+                <a href="dashboard.html">
+                    <div class="card mb-4 text-center " style="width: 20rem;">
+                        <i class="fa fa-line-chart"></i>
+
+                        <i class="fas fa-underline fa-6x"></i>
+                        <div class="card-body ">
+                            <h4 class="card-title">Uncertainty Index</h4>
+                            <p class="card-text">Economic Policy Uncertainty in Housing Markets</p>
+                            <!-- <a href="#" class="btn btn-secondary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                </a>
+                <a href="dashboard.html">
+                    <div class="card mb-4 text-center " style="width: 20rem;">
+                        <i class="fa fa-line-chart"></i>
+
+                        <i class="fas fa-house-damage fa-6x"></i>
+                        <div class="card-body ">
+                            <h4 class="card-title">Housing Observatory Price Index</h4>
+                            <p class="card-text"> The new Repeated Sales Index for three levels of Territorial Units</p>
+                            <!-- <a href="#" class="btn btn-secondary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
+    </section>
 
-    </footer>
-    <!-- Footer -->
+    <section id="markets" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5">
+                    <img src="assets/img/ukmap-dark.png" width="350x" class="rounded text-center" alt="...">
+                    <!-- <img src="static/icon-map.png" width="300px" class="rounded float-left" alt="..."> -->
+                </div>
+                <div class="col-12 col-md-7">
+                    <div class="container">
+
+                        <h2>Discover & Interact</h2>
+                        <!-- <h5 style="color: gray;font-weight: 600;">National and Regional Markets</h5> -->
+                        <p>
+                            You will find a comprehensive set of information and interactive tools to perform real-time monitoring of real estate markets both at the national and regional level in the UK. The analyses provided relate to sustainability of house prices, affordability,
+                            and uncertainty in the housing market. In addition, we make available to you a new price index that is disaggregated up to level NUTS 3 such that you can perform your own analysis. This webpage provides an interactive platform
+                            to access these statistics.
+                        </p>
+
+                        <h5 class="text-center">
+
+                            <a href="dashboard.html" class="btn btn-outline-secondary hvr-pulse-grow"> 
+                                Navigate to Dashboard to find out more !
+                            </a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!--Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        $(function() {
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+    <!--end of footer-->
+
 
 </body>
+<!-- <script src="stat-data.json"></script> -->
+<script src="./assets/js/stat.js"></script>
+
 
 </html>

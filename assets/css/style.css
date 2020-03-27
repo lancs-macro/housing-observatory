@@ -1,71 +1,451 @@
-html {
-    font-family: 'Oswald', sans-serif;
+/* jumbotron */
+
+.jumbotron-index {
+    color: white;
+    background-image: url("https://www.lancaster.ac.uk/media/lancaster-university/content-assets/images/lums/masthead-1600x400/housingobservatory1600x400.png");
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
- #groups .card {
-    padding: 2rem;
-    border: 0px;
-} 
-
-#groups .card-title {
-    font-family: 'Oswald', sans-serif;
-    padding: 1rem;
-    line-height: 3rem;
-}
-
-#groups img {
+.jumbotron-index .container {
+    background: rgba(255, 255, 255, 0.45);
     width: 100%;
-    height: auto;
 }
 
-/* Hover */
-
-.hover08 figure img {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-    border-radius: 10px;
-}
-
-.hover08 figure:hover img {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-    box-shadow: 0 0 20px rgba(33, 33, 33, .2);
+.jumbotron .container h1 {
+    color: #4b4b4b;
 }
 
 
-/* Footer */
+/* section release */
 
-html {
-    position: relative;
-    min-height: 100%;
-    margin-bottom: 0px;
+#release {
+    background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    border-top: 2px solid;
+    padding: 1rem 1rem;
+    /* max-height: 200px; */
 }
 
-footer {
-    padding-top: 4rem;
-    position: absolute;
-    bottom: 0;
-    font-size: 13px;
-    width: 100%;
-    /* height: 60px; */
-}
-
-#sticky-footer {
-    flex-shrink: none;
-}
-
-#sticky-footer a {
-    color: inherit;
-}
-
-#sticky-footer a:hover {
+#release h3 {
+    padding-bottom: 0px;
     color: white;
 }
 
-.footer-copyright {
-    border-top: 1px solid rgba(155, 155, 155, 0.3);
-    text-align: right;
-    font-size: 14px;
+#release .date {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#release .date h3 {
+    line-height: 1.7;
+}
+
+#release .card {
+    background-color: inherit;
+    color: white;
+}
+
+#release .card-body {
+    padding: 10px;
+}
+
+#release .card-title {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#release .card-text {
+    font-size: 18px !important;
+    color: white;
+}
+
+hr.location {
+    border: 1px solid white;
+    text-align: center;
+    width: 40%;
+}
+
+#release .stat h4:after {
+    margin: 1rem;
+    content: ' ';
+    display: block;
+    border: 1px solid white;
+}
+
+
+/* Section intro */
+
+#intro {
+    padding: 6rem 0 6rem 0;
+}
+
+#intro h1 {
+    padding-bottom: 2rem;
+}
+
+#intro .topics-sub {
+    line-height: 1.5;
+    color: grey;
+    font-weight: 600;
+}
+
+
+/* Section topics */
+
+#topics p {
+    color: gray;
+    font-weight: 600;
+}
+
+#topics .card-deck {
+    padding-top: 50px;
+}
+
+#topics .card {
+    border: 0px;
+    background-color: inherit;
+}
+
+#topics a {
+    color: black !important;
+    text-decoration: inherit;
+}
+
+#topics .card:hover {
+    color: rgba(153, 47, 47, 0.5);
+    text-decoration: none;
+}
+
+
+/* section markets */
+
+#markets h2 {
+    padding-top: 1rem;
+}
+
+#markets p {
+    padding: 2rem 1rem;
+    text-align: justify;
+}
+
+#markets a {
+    color: rgb(34, 34, 34) !important;
+}
+
+#markets a:hover {
+    opacity: 1;
+    color: white !important;
+    text-decoration: none;
+}
+
+
+/* ----------------------------------- */
+
+
+/* About */
+
+
+/* ---------------------------------- */
+
+
+/* Section About US */
+
+#about {
+    /* /* background-color: rgba(153, 47, 47, 0.1); */
+    color: black;
+}
+
+#about h1 {
+    padding-bottom: 1rem;
+}
+
+#about .two-col p {
+    color: #4b4b4b !important;
+}
+
+
+/* ---------------------------------- */
+
+.parallax {
+    /* The image used */
+    background-image: url("/assets/img/personal-3285993_1920.png");
+    /* Set a specific height */
+    height: 20vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-members {
+    /* The image used */
+    background-image: url("/assets/img/street-1431207_1920.jpg");
+    /* Set a specific height */
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Median queries for about*/
+
+@media (min-width: 700px) {
+    #about .two-col {
+        text-align: justify;
+        columns: 2;
+        column-gap: 2em;
+    }
+}
+
+
+/* Section meet */
+
+#meet {
+    text-align: center;
+    /* border-top: 1px solid #d5dadf; */
+    padding: 2em 0;
+}
+
+#meet .card {
+    border: 0px;
+    background-color: inherit;
+}
+
+#meet h {
+    margin: 5px 0 0 0;
+}
+
+#meet h4 {
+    color: rgba(153, 47, 47, 0.5);
+    margin: 5px 0 0 0;
+}
+
+#meet a {
+    color: #333;
+    text-decoration: none;
+}
+
+#meet ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#meet li {
+    margin-bottom: 1em;
+    color: #333;
+}
+
+#meet .card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+.thumbnail {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    color: #333;
+}
+
+.icon {
+    display: none;
+    font-size: 3em;
+    position: absolute;
+    color: white;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.thumbnail a>img,
+.thumbnail>img {
+    line-height: 0;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+    position: relative;
+    object-fit: cover;
+    object-position: 100% 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.thumbnail:hover img {
+    opacity: 0.7;
+}
+
+.thumbnail:hover .icon {
+    display: block;
+}
+
+#meet .fa-2x {
+    padding: 7px;
+}
+
+#meet .fa-2x:hover,
+.ai-2x:hover {
+    color: #d5dadf;
+}
+
+
+/*Publications Section*/
+
+#publications {
+    text-align: center;
+    padding: 2em 2em;
+}
+
+#publications p {
+    font-size: 15px;
+    margin-bottom: 0.3rem !important;
+}
+
+#publications i {
+    padding-top: 1rem;
+}
+
+#publications a {
+    padding: 0;
+    margin: 0px;
+    text-align: center;
+}
+
+#publications .card {
+    border: 0px;
+    text-align: left;
+    background-color: inherit;
+}
+
+.publications-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+/* Section Media  */
+
+#media h6 {
+    color: grey;
+}
+
+.media-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+
+/* ----------------------------------- */
+
+
+/* Tab Resources */
+
+
+/* ---------------------------------- */
+
+.subtitle {
+    color: grey;
+    padding-bottom: 1em;
+}
+
+
+/* Resources */
+
+#resources p {
+    padding: 1em 0;
+    color: grey;
+    font-weight: 500;
+}
+
+
+/* data-sources */
+
+
+/* exuberance */
+
+#exuberance h3 {
+    padding-bottom: 1.5rem;
+}
+
+
+/* Comparison */
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+#comparison span {
+    margin-right: 40px;
+}
+
+
+/* .new {
+    background-color: black;
+    border-radius: 50%;
+    font-size: 26px !important;
+    padding: 4px;
+    color: white;
+    text-align: center;
+    height: 22px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    width: 65px;
+} */
+
+#comparison .row {
+    margin-top: 3rem;
+}
+
+#comparison h3 {
+    margin-top: 2rem;
+}
+
+#comparison .box-body p {
+    margin: 2rem;
+    text-align: justify;
+}
+
+
+/* ----------------------------------- */
+
+
+/* Tab Dashboard */
+
+
+/* ---------------------------------- */
+
+iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 999999;
 }

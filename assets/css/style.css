@@ -2,6 +2,30 @@ html {
     font-family: 'Oswald', sans-serif;
 }
 
+.color-darkred {
+    color:rgb(153, 47, 47);
+}
+
+.color-darkblue {
+    color:rgb(49, 70, 88);
+}
+
+#description {
+    padding-top:2rem;
+}
+
+#description .container {
+    padding: 0 6rem;    
+}
+#description p {
+    font-size: 18px;
+}
+
+#groups h1 {
+    font-variant: small-caps;
+    font-size: 30px;
+}
+
  #groups .card {
     padding: 2rem;
     border: 0px;

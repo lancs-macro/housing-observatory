@@ -17,6 +17,13 @@ html {
 #description .container {
     padding: 0 6rem;    
 }
+
+@media(max-width: 975px) {
+    #description .container {
+        padding: 0 2rem;
+    }
+}
+
 #description p {
     font-size: 18px;
 }

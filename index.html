@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>International Housing Observatory</title>
 
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-generic.css">
+
     <!-- favicons -->
     <link rel="shortcut icon" href="assets/img/iho-logo.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -17,7 +20,7 @@
     <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 
     <meta property="og:description" content="">
-    <meta property="og:image" content="assets/img/iho-logo.png">
+    <meta property="og:image" content="assets/img/logo.png">
 
     <!-- https://www.w3schools.com/howto/howto_google_fonts.asp -->
     <link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
@@ -26,13 +29,16 @@
     <!-- Academic icons -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+    <!-- Hover.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <!-- Bootsrap Theme Journal -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css">
 
@@ -40,6 +46,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=TRACKING_ID"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129604855-5"></script>
@@ -53,12 +62,118 @@
 
         gtag('config', 'UA-129604855-5');
     </script>
-
 </head>
 
-<body style="margin:0px;padding:0px;overflow:hidden">
-    <iframe src="https://lancs-macro.shinyapps.io/international-housing-observatory/" frameborder="0" style="display: block; background: #000; border: none; height: 100vh; width: 100vw;"></iframe>
+<body>
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("nav.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <!-- Start the dashboard silently to reduce the loading time -->
+    <!--  <iframe src="https://lancs-macro.shinyapps.io/international-housing-observatory"
+        style="visibility: hidden;"></iframe> -->
+
+
+    <div class="jumbotron jumbotron-index jumbotron-fluid">
+        <div class="container col-md-6 col-sm-12">
+        </div>
+    </div>
+
+    <section id="intro" class="text-center">
+        <div class="container">
+            <h1>International Housing Observatory</h1>
+            <h5 class="topics-sub">A project developed aimed at improving understanding of the international house price dynamics</h5>
+        </div>
+    </section>
+
+    <section id="topics" class="bg-gray">
+        <div class="container">
+            <div class="card-deck">
+                <a href="dashboard.html">
+                    <div class="card mb-4 text-center " style="width: 22rem;">
+                        <i class="fa fa-line-chart"></i>
+
+                        <i class="fas fa-home fa-6x"></i>
+                        <div class="card-body ">
+                            <h4 class="card-title">Real-time Monitoring</h4>
+                            <p class="card-text">Real Etate Markets</p>
+                        </div>
+                    </div>
+                </a>
+                 <a href="dashboard.html">
+                     <div class="card mb-4 text-center" style="width: 20rem;">
+                         <i class="fas fa-globe fa-6x"></i>
+                         <div class="card-body">
+                             <h4 class="card-title">International Coverage</h4>
+                            <p class="card-text"> 27 countries across the world</p>
+                         </div>
+                     </div>
+                 </a>
+                <a href="dashboard.html">
+                    <div class="card mb-4 text-center" style="width: 20rem;">
+                        <i class="fas fa-chart-area fa-6x"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">Financial Stability</h4>
+                            <p class="card-text">Monitoring Exuberance and Collapses in Housing Markets</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="markets" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-7">
+                    <img src="assets/img/world-map.png" width="600px" class="rounded text-center" alt="...">
+                    <!-- <img src="static/icon-map.png" width="300px" class="rounded float-left" alt="..."> -->
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="container">
+
+                        <h2>Discover & Interact</h2>
+                        <!-- <h5 style="color: gray;font-weight: 600;">National and Regional Markets</h5> -->
+                        <p>
+                            You will find a comprehensive set of information and interactive tools to perform real-time
+                            monitoring of international real estate markets. This webpage provides an interactive platform to access these statistics.
+                        </p>
+
+                        <h5 class="text-center">
+
+                            <a href="dashboard.html" class="btn btn-outline-secondary hvr-pulse-grow">
+                                Navigate to Dashboard to find out more !
+                            </a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!--Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        $(function () {
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+    <!--end of footer-->
+
+
 </body>
+<!-- <script src="stat-data.json"></script> -->
+<script src="./assets/js/stat.js"></script>
 
 
 </html>

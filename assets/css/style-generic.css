@@ -1,0 +1,292 @@
+body a {
+    color: rgb(49, 70, 88) !important;
+}
+
+body .no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.page-content {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+
+/* ----------------------------------- */
+
+
+/* Section */
+
+
+/* ---------------------------------- */
+
+.jumbotron {
+    margin-bottom: 0 !important;
+}
+
+section {
+    font-size: 16px !important;
+    padding: 3rem 1rem;
+}
+
+section h2 {
+    padding-bottom: 2rem;
+}
+
+.bg-gray {
+    background-color: #efefef;
+}
+
+.bg-gray2 {
+    background-color: #4b4b4c !important;
+    color: white;
+}
+
+.bg-gray2 p {
+    color: white;
+}
+
+.bg-darkred {
+    background-color: rgba(153, 47, 47, 0.7);
+    color: white;
+}
+
+.bg-darkred p {
+    color: white;
+}
+
+.bg-darkblue {
+    background-color: rgba(49, 70, 88, 0.7);
+    color: white;
+}
+
+.bg-darkblue p {
+    color: white;
+}
+
+.card {
+    border: 0px !important;
+}
+
+hr.section {
+    /* border: 2px solid rgba(153, 47, 47, 0.3);
+    border-radius: 1px; */
+    width: 70%;
+    margin: auto;
+    margin-top: 2%;
+    border: 1px solid gray;
+}
+
+
+/* ----------------------------------- */
+
+
+/* Footer */
+
+
+/* ---------------------------------- */
+
+html {
+    position: relative;
+    min-height: 100%;
+    margin-bottom: 0px;
+}
+
+footer {
+    padding-top: 4rem;
+    position: absolute;
+    bottom: 0;
+    font-size: 13px;
+    width: 100%;
+    height: 60px;
+    /* line-height: 60px; */
+    /* background-color: yellow; */
+}
+
+#sticky-footer {
+    flex-shrink: none;
+}
+
+#sticky-footer a {
+    color: inherit;
+}
+
+#sticky-footer a:hover {
+    color: white;
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(153, 47, 47, 0.1);
+    text-align: right;
+    font-size: 14px;
+    /* background-color: snow; */
+}
+
+
+/* ----------------------------------- */
+
+
+/* Tab navbar */
+
+
+/* ---------------------------------- */
+
+.nav-container {
+    margin: 90px;
+}
+
+
+/* .nav-shadow{
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+} */
+
+.navbar-brand {
+    position: absolute;
+}
+
+.navbar-brand div {
+    padding-left: 3rem;
+    line-height: 120%;
+    font-size: 26px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    /* font-weight: 600; */
+    /* color: firebrick; */
+    display: block;
+    white-space: pre-line;
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar-brand .name {
+    /* font-family: 'Gloria Hallelujah'; */
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    white-space: nowrap;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.navbar-brand .bottom-name {
+    color: black;
+    /* font-family: 'Gloria Hallelujah'; */
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.navbar-after {
+    margin-top: 95px;
+    background: linear-gradient(90deg, rgba(49, 70, 88, 0.8) 0%,
+            /* rgba(153, 47, 47, 0.9) 0%, */
+            rgba(19, 19, 19, 0.9) 70%);
+    min-height: 8px;
+    /* background-color:rgba(153, 47, 47, 0.8); */
+}
+
+@media screen and (max-width: 992px) {
+    .nav-container {
+        margin: 50px
+    }
+
+    .navbar-brand div {
+        font-size: 16px !important;
+        padding-left: 1.5rem;
+    }
+
+    .navbar-brand img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    .navbar-after {
+        margin-top: 55px
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-brand.abs {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 26.5px;
+        padding-bottom: 26.5px;
+        line-height: 27px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    ul.navbar li.right,
+    ul.navbar li {
+        float: none;
+    }
+}
+
+.nav-item {
+    padding: 0 10px;
+}
+
+.nav-item a {
+    color: grey !important;
+}
+
+.nav-item a:hover {
+    color: black !important;
+}
+
+.nav-item .btn {
+    border: 2px solid rgba(153, 153, 153, 0.5);
+    border-radius: 10px;
+    position: relative;
+    white-space: nowrap;
+    margin-top: 23px;
+    padding: 5px 15px;
+    color: rgb(153, 153, 153);
+}
+
+.nav-item .btn:hover {
+    background-color: grey;
+    color: white !important;
+    border: 1px solid rgba(153, 153, 153, 0.4);
+}
+
+.nav-item .btn:active {
+    background-color: rgb(49, 70, 88);
+}
+
+.nav-item .btn:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-collapse {
+        padding-top: 15px;
+    }
+
+    .navbar-collapse .nav-item .btn {
+        margin-top: 8px;
+        margin-right: -10px;
+    }
+
+}

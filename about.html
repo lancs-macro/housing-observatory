@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>International Housing Observatory</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-generic.css">
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="assets/img/iho-logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
+
+    <meta property="og:description" content="">
+    <meta property="og:image" content="assets/img/logo.png">
+
+    <!-- https://www.w3schools.com/howto/howto_google_fonts.asp -->
+    <link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+    <!-- Academic icons -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <!-- Hover.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- Bootsrap Theme Journal -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=TRACKING_ID"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129604855-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129604855-5');
+    </script>
+</head>
+
+<body>
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("nav.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1> About us</h1>
+        </div>
+    </div>
+
+    <!-- Section about -->
+    <section id="about" class="text-center">
+        <div class="container">
+            <div class="two-col">
+                <p>
+                    The International Housing Observatory is a collaborative project of the Federal Reserve Bank of
+                    Dallas and
+                    the <a
+                        href="https://www.lancaster.ac.uk/lums/our-departments/economics/research/uk-housing-observatory/">
+                        Economics Department at Lancaster University Management School (LUMS)</a>.
+                    It provides real-time monitoring of real estate markets across the world. Exuberance indicators are
+                    shown
+                    with data on real house prices (or conventional house-price-to-income ratios) from the latest
+                    release available
+                    of the <a href="https://www.dallasfed.org/institute/houseprice">International House Price
+                        Database</a>,
+                    compiled by the <a href="https://www.dallasfed.org/institute/">Federal Reserve Bank of Dallas</a>.
+                </p>
+                <p>
+                    The exuberance indicators are computed using statistical techniques pioneered by Yale economist
+                    Peter C. B.
+                    Phillips and his co-authors—two recursive (right-tailed) unit root tests called the Supremum
+                    Augmented
+                    Dickey-Fuller (SADF) and Generalized SADF (GSADF) tests. These statistics detect and date periods
+                    of
+                    exuberance, typically when house prices (or house prices relative to personal disposable income per
+                    capita)
+                    display explosive behavior.
+                </p>
+                <p>
+                    Explosive or exuberant behavior may occur when real house prices become detached from housing
+                    fundamentals
+                    and the current strength of real house price appreciation is instead supported largely on the
+                    belief of
+                    robust future price increases. When exuberant housing market episodes (booms) result from sizeable
+                    deviations from housing fundamentals occurring for too long, housing markets become more vulnerable
+                    and at risk of large corrections (busts).
+                </p>
+                <p>
+                    Thus, the exuberance indicators provide a useful signal of emerging misalignments and are powerful
+                    tools for early
+                    warning and monitoring international real estate markets.
+                </p>
+            </div>
+            <hr class="section">
+        </div>
+    </section>
+
+
+
+    <section id="meet" class="text-center">
+        <div class="container">
+            <h2>Team Members</h2>
+            <div class="card-deck">
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="thumbnail">
+                            <a href="https://sites.google.com/view/emgeconomics/" target="_blank">
+                                <div class="icon"><i class="fas fa-user" aria-hidden="true"></i></div>
+                                <img src="assets/img/avatars/enrique.jpg">
+                            </a>
+                        </div>
+                        <h3>Enrique Martínez García</h3>
+                        <h4>Director</h4>
+                    </div>
+                </div>
+
+                <div class="card card-body">
+                    <div class="thumbnail">
+                        <a href="https://sites.google.com/site/etpavlidis/" target="_blank">
+                            <div class="icon"><i class="fas fa-user" aria-hidden="true"></i></div>
+                            <img src="assets/img/avatars/themis.jpg">
+                        </a>
+                    </div>
+                    <h3>Themis Pavlidis</h3>
+                    <h4>Director</h4>
+                </div>
+
+                <div class="card card-body">
+                    <div class="thumbnail">
+                        <a href="https://ivanpaya.weebly.com/" target="_blank">
+                            <div class="icon"><i class="fas fa-user" aria-hidden="true"></i></div>
+                            <img src="assets/img/avatars/ivan.jpg">
+                        </a>
+                    </div>
+                    <h3>Ivan Paya</h3>
+                    <h4>Director</h4>
+                </div>
+            </div>
+
+            <div class="card-deck">
+
+
+                <div class="card card-body">
+                    <div class="thumbnail">
+                        <a href="https://kvasilopoulos.netlify.com/" target="_blank">
+                            <div class="icon"><i class="fas fa-user" aria-hidden="true"></i></div>
+                            <img src="assets/img/avatars/kostas.jpeg">
+                        </a>
+                    </div>
+                    <h3>Kostas Vasilopoulos</h3>
+                    <h4>Web Administator</h4>
+                </div>
+
+                <div class="card card-body">
+                    <div class="thumbnail">
+                        <a href="https://www.linkedin.com/in/vgrossman/" target="_blank">
+                            <div class="icon"><i class="fas fa-user" aria-hidden="true"></i></div>
+                            <img src="assets/img/avatars/valerie.jpg">
+                        </a>
+                    </div>
+                    <h3>Valerie Grossman</h3>
+                    <h4>Researcher</h4>
+                </div>
+
+                <div class="card card-body">
+                    <div class="thumbnail">
+                        <a href="http://www.lancaster.ac.uk/lums/people/alisa-yusupova" target="_blank">
+                            <div class="icon"><i class="fas fa-user" aria-hidden="true"></i></div>
+                            <img src="assets/img/avatars/alisa.jpg">
+                        </a>
+                    </div>
+                    <h3>Alisa Yusupova</h3>
+                    <h4>Web Administator</h4>
+                </div>
+
+    </section>
+
+     <section id="publications">
+         <div class="container">
+             <h2>Research Output</h2>
+
+             <!-- <div class="publications-grid-container"> -->
+             <div class="row">
+                 <div class="col-12 col-md-6">
+                     <div class="card">
+                         <div class="card-body">
+                             
+                             <div class="row">
+                                 <div class="col-2 col-md-2">
+                                     <i class="fas fa-graduation-cap fa-3x"></i>
+                                 </div>
+                                 <div class="col-9 col-md-9 offset-1">
+                                     <p><strong>Mack, A., and E. Martínez-García. (2011)</strong></p>
+                                     <p><a href="https://www.dallasfed.org/~/media/documents/institute/wpapers/2011/0099.pdf"
+                                             target="_blank">
+                                             A Cross-Country Quarterly Database of Real House Prices: A Methodological
+                                             Note </a>
+                                         <p>Globalization and Monetary Policy Institute Working Paper No. 99, Federal
+                                             Reserve Bank of Dallas.</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-12 col-md-6">
+                     <div class="card card-body">
+                         <div class="row">
+                             <div class="col-2 col-md-2">
+                                 <i class="fas fa-graduation-cap fa-3x"></i>
+                             </div>
+                             <div class="col-9 col-md-9 offset-1">
+                                 <p><strong>Pavlidis E.G., Yusupova A., Paya I., Peel D.A., Martínez-García E., Mack A.,
+                                         Grossman V.
+                                         (2016) </strong></p>
+                                 <p><a href="https://link.springer.com/article/10.1007/s11146-015-9531-2"
+                                         target="_blank">
+                                         Episodes of Exuberance in Housing Markets: In Search of the Smoking Gun</a></p>
+                                 <p>Journal of Real Estate Finance and Economics, vol.53(4), pp.419-449.</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-12 col-md-6">
+                     <div class="card card-body">
+                         <div class="row">
+                             <div class="col-2 col-md-2">
+                                 <i class="fas fa-graduation-cap fa-3x"></i>
+                             </div>
+                             <div class="col-9 col-md-9 offset-1">
+                                 <p><strong>Pavlidis E.G., Martínez-García E., Grossman V. (2018)</strong></p>
+                                 <p><a href="https://www.sciencedirect.com/science/article/pii/S0264999318300968"
+                                         target="_blank">
+                                         Detecting periods of exuberance: A look at the role of aggregation with an
+                                         application to house prices</a></p>
+                                 <p>Economic Modelling</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+
+
+    <!--Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        $(function () {
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+    <!--end of footer-->
+
+
+</body>
+<!-- <script src="stat-data.json"></script> -->
+<script src="./assets/js/stat.js"></script>
+
+
+</html>

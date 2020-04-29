@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard | International Housing Observatory</title>
+    <title>Disclaimer | International Housing Observatory</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-generic.css">
 
     <!-- favicons -->
     <link rel="shortcut icon" href="assets/img/iho-logo.png" />
@@ -17,7 +20,7 @@
     <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 
     <meta property="og:description" content="">
-    <meta property="og:image" content="assets/img/iho-logo.png">
+    <meta property="og:image" content="assets/img/logo.png">
 
     <!-- https://www.w3schools.com/howto/howto_google_fonts.asp -->
     <link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
@@ -26,13 +29,16 @@
     <!-- Academic icons -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+    <!-- Hover.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <!-- Bootsrap Theme Journal -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css">
 
@@ -40,6 +46,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=TRACKING_ID"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129604855-5"></script>
@@ -53,12 +62,42 @@
 
         gtag('config', 'UA-129604855-5');
     </script>
-
 </head>
 
-<body style="margin:0px;padding:0px;overflow:hidden">
-    <iframe src="https://lancs-macro.shinyapps.io/international-housing-observatory-dashboard/" frameborder="0" style="display: block; background: #000; border: none; height: 100vh; width: 100vw;"></iframe>
-</body>
+<body>
 
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("nav.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1> Disclaimer</h1>
+        </div>
+    </div>
+
+     <section class="disclaimer">
+         <div class="container">
+             <p style="font-size:20px;">
+                 The views presented here are those of the authors and do not necessarily represent those of the Federal
+                 Reserve Bank of Dallas or the Federal Reserve System.
+             </p>
+         </div>
+     </section>
+   
+    <!--Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        $(function () {
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+    <!--end of footer-->
+</body>
 
 </html>

@@ -9,7 +9,7 @@
         content=" A project developed aimed at improving understanding of the national and regional house price dynamics.">
     <meta name="author" content="Lancaster Univeristy, Department of Economics">
     <meta name="keywords"
-        content="Real Estate Markets, Financial Stability, Exuberance Indicators, Housing Uncertainty Index">
+        content="Housing Observatory, UK, Intenational, Real Estate Markets, Financial Stability, Exuberance Indicators, Housing Uncertainty Index">
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/img/logo.png" />
@@ -45,8 +45,10 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
     <!-- Bootsrap Theme Journal -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css">
 
@@ -65,13 +67,52 @@
 
 <body>
 
-    <nav class="navbar navbar-light bg-light">
+    <!-- <nav class="navbar navbar-light bg-light navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <span class="navbar-brand"
+                style="float:none;margin:0 auto;display: block;text-align: center; font-size: 30px; font-family: 'Oswald', sans-serif;text-transform:none;font-variant:small-caps;">
+                <img src="assets/img/logo.png" alt="Housing Observatory Logo" height="50px" , style="padding-right: 3rem;">
+                Housing Observatory</span>
+            </div>
+        </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+    
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown active">
+                    <span class="navbar-brand"
+                        style="float:none;margin:0 auto;display: block;text-align: center; font-size: 30px; font-family: 'Oswald', sans-serif;text-transform:none;font-variant:small-caps;">
+                        <img src="assets/img/logo.png" alt="Housing Observatory Logo" height="50px" , style="padding-right: 3rem;">
+                        Housing Observatory</span>
+                    </div>
+                    <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false" style="float:none;margin:0 auto;display: block;text-align: center; font-size: 30px; font-family: 'Oswald', sans-serif;text-transform:none;font-variant:small-caps;">
+                        <img src="assets/img/logo.png" alt="Housing Observatory Logo" height="50px" , style="padding-right: 3rem;">
+                        Housing Observatory
+                    </a> -->
+                    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#"><img src="assets/img/ukho-logo.png" height =20px style ="padding-right:5px;" alt="Housing Observatory Logo">United Kingdom Housing Observatory</a>
+                        <a class="dropdown-item" href="#"><img src="assets/img/iho-logo.png" height=20px style="padding-right:5px;" alt="Housing Observatory Logo">International Housing Observatory</a>
+                    </div> -->
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- <nav class="navbar navbar-light bg-light">
         
         <span class="navbar-brand"
             style="float:none;margin:0 auto;display: block;text-align: center; font-size: 28px;font-family: 'Oswald', sans-serif;font-variant: small-caps;font-variant: small-caps;">
             <img src="assets/img/logo.png" alt="Housing Observatory Logo" height="50px", style="padding-right: 1rem;">
             Housing Observatory</span>
-    </nav>
+    </nav> -->
 
     <!-- <section style="padding-top: 3rem;">
         <div class="container text-center" >
@@ -81,14 +122,25 @@
         </div>
     </section> -->
 
-    <section id="description">
+    <div id="header" class="jumbotron jumbotron-index jumbotron-fluid" style="background-image: url('assets/img/skyline-trans2.png');">
+        <div class="container col-md-7 col-sm-12 text-center">
+            <!-- <div class="container"> -->
+                <h2 style="margin-bottom: 1rem;">Understanding Real Estate Markets</h2>
+                <p style="font-size:17px;font-weight:500;"> The Housing Observatory is a project aiming to improve our understanding of housing markets. We provide a comprehensive
+                publicly available set of information and tools to perform real-time monitoring of real estate markets.</p>
+            <!-- </div> -->
+        </div>
+    </div>
+
+    
+    <!-- <section id="description">
         <div class="container text-justify">
             <p>
                 The Housing Observatory is a project aiming to improve our understanding of  housing markets. 
                 We provide a comprehensive publicly available set of information and tools to perform real-time monitoring of real estate markets.
             </p>
         </div>
-    </section>
+    </section> -->
 
 
     <section id="groups" style="padding-top: 0rem;">

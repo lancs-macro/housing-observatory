@@ -1,3 +1,20 @@
+
+.jumbotron-index {
+    background-color: white !important;
+    height: 30vh;
+    /* opacity: 0.2; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.jumbotron-index .container p{
+    /* color: #4b4b4b; */
+    background-color: rgba(128, 128, 128, 0);
+    color: black;
+}
+
 html {
     font-family: 'Oswald', sans-serif;
 }

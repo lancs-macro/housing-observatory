@@ -27,7 +27,6 @@
     background-size: cover;
 }
 
-
 /* Section intro */
 
 #intro {
@@ -42,6 +41,22 @@
     line-height: 1.5;
     color: grey;
     font-weight: 600;
+}
+
+#intro {
+    padding-bottom: 0px
+}
+
+/* Section c3-chart */
+
+
+@media (max-width: 700px) {
+    #c3-chart {
+        display: none !important
+    }
+    #intro {
+        padding: 2rem;
+    }
 }
 
 

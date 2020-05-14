@@ -1,4 +1,16 @@
 
+html {
+    font-family: 'Oswald', sans-serif;
+}
+
+.dropdown-menu a {
+    font-size:20px;
+}
+.dropdown-menu a:hover {
+    color:white;
+    background-color: black;
+}
+
 .jumbotron-index {
     background-color: white !important;
     height: 30vh;
@@ -15,9 +27,7 @@
     color: black;
 }
 
-html {
-    font-family: 'Oswald', sans-serif;
-}
+
 
 .color-darkred {
     color:rgb(153, 47, 47);

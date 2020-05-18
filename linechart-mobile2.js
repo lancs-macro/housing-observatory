@@ -1,14 +1,17 @@
 
 var chart = c3.generate({
-    bindto: d3.select('#chart-mobile'),
+    bindto: d3.select('#chart-mobile2'),
     data: {
-        url: '/data/level.csv',
+        url: '/data/growth.csv',
         x: 'date',
         colors: {
             UK: '#992f2f',
             Aggregate: '#314658'
         },
-        type: 'line'
+        type: 'line',
+        line: {
+            title: 'House Price Level' 
+        }
     },
     size: {
         height: 550
@@ -46,11 +49,11 @@ var chart = c3.generate({
         },
         y: {
             tick: {
-                values: [0, 30, 60, 90, 120, 150, 180, 210],
+                values: [-20, -15, -10, -5, 0, 5, 10, 15, 20],
                 rotate: 90
             },
             label: {
-                text: 'House Price Level',
+                text: 'House Price Growth',
                 position: 'inner-middle',
             }
         }
@@ -60,4 +63,3 @@ var chart = c3.generate({
 chart.hide(["Australia", "Belgium", "Canada", "Switzerland", "Germany", "Denmark", "Spain",
     "Finland", "France", "Ireland", "Italy", "Japan", "S. Korea", "Luxembourg", "Netherlands",
     "Norway", "New Zealand", "Sweden", "S. Africa", "Croatia", "Israel"], { withLegend: true })
-

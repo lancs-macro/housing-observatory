@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="assets/css/c3.css">
     <script src="assets/js/c3.min.js"></script>
 
+
     <!-- Academic icons -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     <!-- Font Awesome icons -->
@@ -100,17 +101,61 @@
 
     <section id="c3-chart">
         <div class="container">
-            <div class="chart"></div>
+            <div class="chart-row">
+                <div></div>
+                <input id="chart-button" class="btn btn-outline-secondary" type="button" value="Switch: Growth"
+                    onclick="switchVisible();" />
+            </div>
+            <div id="chart"></div>
+            <div id="chart2"></div>
         </div>
     </section>
     <script src="linechart.js"></script>
+    <script src="linechart2.js"></script>
 
     <section id="c3-chart-mobile">
-        <div class="container">
-            <div class="chart-mobile"></div>
+        <div class="chart-row">
+            <div></div>
+            <input id="chart-button" class="btn btn-outline-secondary" type="button" value="Switch: Growth"
+                onclick="switchVisible();" />
         </div>
+        <div id="chart-mobile"></div>
+        <div id="chart-mobile2"></div>
     </section>
-     <script src="linechart-mobile.js"></script>
+    <script src="linechart-mobile.js"></script>
+    <script src="linechart-mobile2.js"></script>
+
+    <script language="javascript">
+        function switchVisible() {
+            if (document.getElementById('chart')) {
+
+                if (document.getElementById('chart').style.display == 'none') {
+                    document.getElementById('chart').style.display = 'block';
+                    document.getElementById('chart2').style.display = 'none';
+                    document.getElementById("chart-button").value = "Switch: Growth";
+
+                } else {
+                    document.getElementById('chart').style.display = 'none';
+                    document.getElementById('chart2').style.display = 'block';
+                    document.getElementById("chart-button").value = "Switch: Level";
+                }
+            }
+            if (document.getElementById('chart-mobile')) {
+
+                if (document.getElementById('chart-mobile').style.display == 'none') {
+                    document.getElementById('chart-mobile').style.display = 'block';
+                    document.getElementById('chart-mobile2').style.display = 'none';
+                    document.getElementById("chart-button").value = "Switch: Growth";
+
+                } else {
+                    document.getElementById('chart-mobile').style.display = 'none';
+                    document.getElementById('chart-mobile2').style.display = 'block';
+                    document.getElementById("chart-button").value = "Switch: Level";
+                }
+            }
+        }
+    </script>
+
 
     <section id="topics" class="bg-gray">
         <div class="container">

@@ -1,21 +1,12 @@
 var chart = c3.generate({
-    bindto: d3.select('.chart'),
+    bindto: d3.select('#chart'),
     data: {
-        url: 'prices.csv',
+        url: '/data/level.csv',
         x: 'date',
         colors: {
             UK: '#992f2f',
             Aggregate: '#314658'
-        },
-        onresize: function () {
-            
-        },
-        //onmouseover: onMouseover,
-        /*columns: [
-            ['date', '2013-01-01', '2013-01-02', '2013-01-03', '2013-01-04', '2013-01-05', '2013-01-06'],
-            ['data1', 30, 200, 100, 400, 150, 250],
-            ['data2', 130, 340, 200, 500, 250, 350]
-        ]*/
+        }
     },
     size: {
         height: 550
@@ -56,7 +47,7 @@ var chart = c3.generate({
                 values: [0, 30, 60, 90, 120, 150, 180, 210]
             },
             label: {
-                text: 'House Prices',
+                text: 'House Price Level',
                 position: 'outer-middle'
             }
         }
@@ -67,7 +58,3 @@ chart.hide(["Australia", "Belgium", "Canada", "Switzerland", "Germany", "Denmark
     "Finland", "France", "Ireland", "Italy", "Japan", "S. Korea", "Luxembourg", "Netherlands",
     "Norway", "New Zealand", "Sweden", "S. Africa", "Croatia", "Israel"], { withLegend: true })
 
-chart.resize({
-    height: 200,
-    width: 350
-});

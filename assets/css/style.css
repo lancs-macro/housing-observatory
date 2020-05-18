@@ -53,12 +53,38 @@
     text-anchor: start;
     transform: rotate(0deg);
 } */
+ .chart-row {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ #chart-button {
+     cursor: pointer;
+     color: black;
+ }
+
+#chart-button:hover {
+    color: white;
+}
+
+#chart2 {
+    display: none;
+}
+
+
+
+.c3-line {
+    stroke-width:1.5px !important;
+    /* stroke-dasharray: 5, 5; */
+}
 
 @media(min-width: 700px) {
     #c3-chart-mobile {
         display: none !important;
     }
-    
+    .c3-axis-y-label {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 700px) {

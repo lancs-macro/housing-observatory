@@ -47,7 +47,7 @@ var chart = c3.generate({
                 values: [-30,-25,-20,-15, -10, -5, 0, 5, 10, 15, 20, 25, 30]
             },
             label: {
-                text: 'House Price Growth',
+                text: 'YoY House Price Growth (%)',
                 position: 'outer-middle'
             }
         }

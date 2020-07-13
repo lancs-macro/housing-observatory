@@ -53,7 +53,7 @@ var chart = c3.generate({
                 rotate: 90
             },
             label: {
-                text: 'House Price Growth',
+                text: 'YoY House Price Growth (%)',
                 position: 'inner-middle',
             }
         }

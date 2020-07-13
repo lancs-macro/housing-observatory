@@ -9,9 +9,13 @@ main <- ihpd_get("raw") %>%
 
 main %>%
   purrr::map_df(round, 2) %>%
+  select(-`Aggregate - 2005 Fixed Weights`) %>%
+  rename("Aggregate" = `Aggregate - Dynamic Weights`) %>%
   write_csv("data/level.csv")
 
 main %>%
   purrr::modify_if(is.numeric, diff4) %>%
   purrr::map_df(round, 2) %>%
+  select(-`Aggregate - 2005 Fixed Weights`) %>%
+  rename("Aggregate" = `Aggregate - Dynamic Weights`) %>%
   write_csv("data/growth.csv")

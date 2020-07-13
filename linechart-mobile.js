@@ -27,12 +27,12 @@ var chart = c3.generate({
     grid: {
         y: {
             show: true
-        },
-        x: {
-            lines: [
-                { value: "2005-01-01", text: 'Base Year' },
-            ]
         }
+        // x: {
+        //     lines: [
+        //         { value: "2005-01-01", text: 'Base Year' },
+        //     ]
+        // }
     },
     axis: {
         x: {
@@ -41,6 +41,10 @@ var chart = c3.generate({
                 fit: true,
                 format: '%Y-Q%q',
                 count: 5
+            },
+            label: {
+                text: 'Base Year = 2005',
+                position: 'inner-right'
             }
 
         },

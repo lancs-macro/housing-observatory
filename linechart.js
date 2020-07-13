@@ -12,7 +12,7 @@ var chart = c3.generate({
         height: 550
     },
     padding: {
-        right: 220,
+        right: 160,
         bottom: 48
     },
     legend: {
@@ -39,8 +39,11 @@ var chart = c3.generate({
                 fit: true,
                 format: '%Y-Q%q',
                 count: 15
+            },
+            label: {
+                text: 'Base Year = 2005',
+                position: 'inner-right'
             }
-
         },
         y: {
             tick: {

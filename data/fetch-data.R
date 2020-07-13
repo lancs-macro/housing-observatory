@@ -1,7 +1,7 @@
 library(tidyverse)
 library(ihpdr)
 
-diff4 <- function(x) log(x) - dplyr::lag(log(x), n = 4L)
+diff4 <- function(x) (log(x) - dplyr::lag(log(x), n = 4L))*100
 
 main <- ihpd_get("raw") %>%
   select(date = Date, country, hpi) %>%
@@ -9,9 +9,9 @@ main <- ihpd_get("raw") %>%
 
 main %>%
   purrr::map_df(round, 2) %>%
-  write_csv("level.csv")
+  write_csv("data/level.csv")
 
 main %>%
   purrr::modify_if(is.numeric, diff4) %>%
   purrr::map_df(round, 2) %>%
-  write_csv("growth.csv")
+  write_csv("data/growth.csv")

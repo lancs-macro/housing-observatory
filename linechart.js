@@ -12,7 +12,7 @@ var chart = c3.generate({
         height: 550
     },
     padding: {
-        right: 130,
+        right: 220,
         bottom: 48
     },
     legend: {
@@ -56,5 +56,5 @@ var chart = c3.generate({
 
 chart.hide(["Australia", "Belgium", "Canada", "Switzerland", "Germany", "Denmark", "Spain",
     "Finland", "France", "Ireland", "Italy", "Japan", "S. Korea", "Luxembourg", "Netherlands",
-    "Norway", "New Zealand", "Sweden", "S. Africa", "Croatia", "Israel"], { withLegend: true })
+    "Norway", "New Zealand", "Sweden", "S. Africa", "Croatia", "Israel", "Slovenia"], { withLegend: true })
 

@@ -25,11 +25,6 @@ var chart = c3.generate({
     grid: {
         y: {
             show: true
-        },
-        x: {
-            lines: [
-                { value: "2005-01-01", text: 'Base Year' },
-            ]
         }
     },
     axis: {

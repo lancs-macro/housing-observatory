@@ -57,4 +57,5 @@ var chart = c3.generate({
 
 chart.hide(["Australia", "Belgium", "Canada", "Switzerland", "Germany", "Denmark", "Spain",
     "Finland", "France", "Ireland", "Italy", "Japan", "S. Korea", "Luxembourg", "Netherlands",
-    "Norway", "New Zealand", "Sweden", "S. Africa", "Croatia", "Israel", "Slovenia"], { withLegend: true })
+    "Norway", "New Zealand", "Sweden", "S. Africa", "Croatia", "Israel", "Colombia","Slovenia"], { withLegend: true })
+

@@ -3,32 +3,32 @@ title: housing-site-main
 type: project
 status: active
 created: 2026-10-27
-updated: 2026-10-29
+updated: 2026-11-04
 sources: []
 scope: housing-observatory
 tags: [project, frontend]
 verified_commit: f64b5f8be288cd1df310d2771b2c1a466c331c2c
-files: [index.html, Makefile, nav.html, footer.html, assets/js/stat.js]
+files: [index.html, wrangler.jsonc, assets/css/style.css]
 ---
 # housing-site-main
 
-Static HTML front page of the Housing Observatory (page title "UK Housing Observatory") with about, dashboard, resources and disclaimer pages.
+Gateway page of the Housing Observatory (housing-observatory.com): one static page that links to the UK and International observatories.
 
 Part of [[concepts/housing-observatory]]. GitHub: `lancs-macro/housing-observatory`.
 
 ## Stack
-Plain HTML, CSS and JS; no build step. `nav.html` and `footer.html` are shared partials. `assets/js/stat.js` holds the headline statistics.
+Plain HTML and CSS; no build step. Hosted on Cloudflare Workers static assets (`wrangler.jsonc`, Worker `housing-observatory-main`, custom domains `housing-observatory.com` and `www`); a Redirect Rule sends `www` to the apex. Workers Builds deploys on push to `main`. Replaced Netlify on 2026-11-04.
 
 ## Run and test
-Open `index.html` or serve the folder with any static server. `make download_json` and `make download_png` fetch `output/stat.js` and `output/comparison.png` from the `lancs-macro/ukho-dashboard` repo into `assets/`.
+Open `index.html` or serve the folder with any static server.
 
 ## Layout
-- `index.html`, `about.html`, `dashboard.html`, `resources.html`, `disclaimer.html`, `404.html`, `sitemap.xml`
-- `assets/` css, img, js
+`index.html`, `sitemap.xml`, `assets/css/style.css`, `assets/img/`.
+
+## History
+Until 2026-11-04 the repo held a full copy of the UK site (about, dashboard, resources pages), which never matched what the domain served. It was replaced by the live gateway page; the old files are in git history. See [[projects/housing-site-uk/housing-site-uk]].
 
 ## Unknowns
-- Where it is deployed: no `netlify.toml` or deploy script here (unverified).
-- How it relates to [[projects/housing-site-uk/housing-site-uk]]: both use the title "UK Housing Observatory" and almost the same files. Pick one as canonical or document the split.
-- `dashboard.html` links the old `lancs-macro.shinyapps.io` dashboard; the UK site has since moved to Posit Connect Cloud.
+- None open.
 
 Related: [[concepts/housing-observatory]], [[conventions]], [[inbox/housing-site-main]].

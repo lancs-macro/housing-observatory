@@ -1,0 +1,13 @@
+.git
+.gitignore
+.kbname
+.vscode
+.claude
+.assetsignore
+wrangler.jsonc
+CLAUDE.md
+README.md
+Makefile
+deploy.sh
+knowledge
+wiki

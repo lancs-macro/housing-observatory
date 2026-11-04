@@ -32,3 +32,6 @@ Until 2026-11-04 the repo held a full copy of the UK site (about, dashboard, res
 - None open.
 
 Related: [[concepts/housing-observatory]], [[conventions]], [[inbox/housing-site-main]].
+
+## Analytics
+GA4 tag `G-ZHNETED6TG` (property "Housing Observatory - GA4"). The ID lives once, in `scripts/set_ga.py` (`GA_ID`); run `python scripts/set_ga.py` to rewrite every page, `--check` to verify. Replaced the dead `UA-129604855-5` tag on 2026-11-04.
